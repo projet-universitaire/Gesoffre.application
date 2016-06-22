@@ -49,18 +49,10 @@ class="admin-validation-page sb-l-o sb-r-c onload-check" data-spy="scroll" data-
             <li class="crumb-link">
               <a href="index.html">Home</a>
             </li>
-            <li class="crumb-trail">Dashboard</li>
+            <li class="crumb-trail">Edit Sponsor</li>
           </ol>
         </div>
-        <div class="topbar-right">
-          
-          <div class="ml15 ib va-m" id="toggle_sidemenu_r">
-            <a href="#" class="pl5">
-              <i class="fa fa-sign-in fs22 text-primary"></i>
-              <span class="badge badge-hero badge-danger">3</span>
-            </a>
-          </div>
-        </div>
+       
       </header>
       <!-- End: Topbar -->
 
