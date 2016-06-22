@@ -1,7 +1,8 @@
-<?php $__env->startSection('title'); ?>
+@extends('layouts.default')
+@section('title')
     Dashboard
-<?php $__env->stopSection(); ?>
-<?php $__env->startSection('header'); ?>
+@stop
+@section('header')
   
   <!-- Font CSS (Via CDN) -->
   <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700'>
@@ -26,14 +27,14 @@
 
 
 
-<?php $__env->stopSection(); ?>
+@stop
 
-<?php $__env->startSection('body_atributes'); ?>
+@section('body_atributes')
 class="dashboard-page"
-<?php $__env->stopSection(); ?>
+@stop
 
 
-<?php $__env->startSection('content_wrapper'); ?>
+@section('content_wrapper')
  <section id="content_wrapper">
 
       <!-- Start: Topbar-Dropdown -->
@@ -45,15 +46,15 @@ class="dashboard-page"
         <div class="topbar-left">
           <ol class="breadcrumb">
             <li class="crumb-active">
-              <a href="<?php echo e(url('/')); ?>">Dashboard</a>
+              <a href="{{url('/')}}">Dashboard</a>
             </li>
             <li class="crumb-icon">
-              <a href="<?php echo e(url('/')); ?>">
+              <a href="{{url('/')}}">
                 <span class="glyphicon glyphicon-home"></span>
               </a>
             </li>
             <li class="crumb-link">
-              <a href="<?php echo e(url('/')); ?>">Home</a>
+              <a href="{{url('/')}}">Home</a>
             </li>
             <li class="crumb-trail">Dashboard</li>
           </ol>
@@ -1098,12 +1099,12 @@ class="dashboard-page"
       <!-- End: Content -->
 
       <!-- Begin: Page Footer -->
-       <?php echo $__env->make('layouts.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+       @include('layouts.footer')
       <!-- End: Page Footer -->
 
     </section>
-<?php $__env->stopSection(); ?>
-<?php $__env->startSection('script'); ?>
+@stop
+@section('script')
 
   <!-- BEGIN: PAGE SCRIPTS -->
 
@@ -1433,6 +1434,4 @@ class="dashboard-page"
   });
   </script>
   <!-- END: PAGE SCRIPTS -->
-<?php $__env->stopSection(); ?>
-
-<?php echo $__env->make('layouts.default', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+@stop

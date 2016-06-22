@@ -25,7 +25,7 @@
           <div class="sidebar-widget menu-widget">
             <div class="row text-center mbn">
               <div class="col-xs-4">
-                <a href="dashboard.html" class="text-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Dashboard">
+                <a href="{{url('/')}}" class="text-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Dashboard">
                   <span class="glyphicon glyphicon-home"></span>
                 </a>
               </div>
@@ -76,8 +76,8 @@
 <ul class="nav sidebar-menu">
     <li class="sidebar-label pt20">Menu</li>
 
-    <li {{ (current_page("offre")) ? 'class=active' : ''}}>
-        <a href="{{url('/offre')}}">
+    <li {{ (current_page("/")) ? 'class=active' : ''}}>
+        <a href="{{url('/')}}">
             <span class="glyphicon glyphicon-home"></span>
             <span class="sidebar-title">Dashboard</span>
         </a>
@@ -91,12 +91,12 @@
             <span class="caret"></span>
         </a>
         <ul class="nav sub-nav">
-            <li class="">
-                <a href="{{route('offer')}}">
+            <li>
+                <a href="">
                     <span class="fa fa-cube"></span> List Offers</a>
             </li>
-            <li>
-                <a href="{{route('offer')}}">
+            <li{{ (current_page("offer/create")) ? 'class=active' : ''}}>
+                <a href="{{url('offer/create')}}">
                     <span class="fa fa-desktop"></span> Add New Offer </a>
             </li>
         </ul>
@@ -126,11 +126,11 @@
         </a>
         <ul class="nav sub-nav">
             <li>
-                <a href="{{route('offer')}}">
+                <a href="">
                     <span class="fa fa-cube"></span> List Categories</a>
             </li>
             <li>
-                <a href="{{route('offer')}}">
+                <a href="">
                     <span class="fa fa-desktop"></span> Add Category </a>
             </li>
         </ul>

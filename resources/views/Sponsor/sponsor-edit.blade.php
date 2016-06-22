@@ -1,19 +1,19 @@
-
-<?php $__env->startSection('title'); ?>
-    Add Sponsor 
-<?php $__env->stopSection(); ?>
-<?php $__env->startSection('header'); ?>
+@extends('layouts.default')
+@section('title')
+    Edit Sponsor
+@stop
+@section('header')
 <!-- Font CSS (Via CDN) -->
   <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700'>
 
   <!-- Theme CSS -->
-  <link rel="stylesheet" type="text/css" href="<?php echo e(asset('assets/skin/default_skin/css/theme.css')); ?>">
+  <link rel="stylesheet" type="text/css" href="{{asset('assets/skin/default_skin/css/theme.css')}}">
 
   <!-- Admin Forms CSS -->
-  <link rel="stylesheet" type="text/css" href="<?php echo e(asset('assets/admin-tools/admin-forms/css/admin-forms.css')); ?>">
+  <link rel="stylesheet" type="text/css" href="{{asset('assets/admin-tools/admin-forms/css/admin-forms.css')}}">
 
   <!-- Favicon -->
-  <link rel="shortcut icon" href="<?php echo e(asset('assets/img/favicon.ico')); ?>">
+  <link rel="shortcut icon" href="{{asset('assets/img/favicon.ico')}}">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
@@ -23,14 +23,14 @@
 
 
 
-<?php $__env->stopSection(); ?>
+@stop
 
-<?php $__env->startSection('body_atributes'); ?>
+@section('body_atributes')
 class="admin-validation-page sb-l-o sb-r-c onload-check" data-spy="scroll" data-target="#nav-spy" data-offset="200" style="min-height: 502px;"
-<?php $__env->stopSection(); ?>
+@stop
 
 
-<?php $__env->startSection('content_wrapper'); ?>
+@section('content_wrapper')
 <section id="content_wrapper">
 
      
@@ -68,7 +68,7 @@ class="admin-validation-page sb-l-o sb-r-c onload-check" data-spy="scroll" data-
 
               <div class="panel heading-border panel-primary">
 
-                <form method="post" action="<?php echo e(action('sponsorController@update')); ?>" id="admin-form" novalidate="novalidate">
+                <form method="post" action="{{action('sponsorController@update')}}" id="admin-form" novalidate="novalidate">
                     <input type="hidden"  name="_token" value="<?= csrf_token(); ?>">
 
                   <div class="panel-body bg-light">
@@ -78,7 +78,7 @@ class="admin-validation-page sb-l-o sb-r-c onload-check" data-spy="scroll" data-
                     </div>
                     <!-- .section-divider -->
                     <!--errors with laravel -->
-                    <p style="color: red "><?php echo e($errors->first('label')); ?></p>
+                    <p style="color: red ">{{$errors->first('label')}}</p>
                     
                     <!-- end errors with laravel --> 
                     
@@ -162,8 +162,8 @@ class="admin-validation-page sb-l-o sb-r-c onload-check" data-spy="scroll" data-
       <!-- End: Content -->
 
     </section>
-<?php $__env->stopSection(); ?>
-<?php $__env->startSection('script'); ?>
+@stop
+@section('script')
 <!-- BEGIN: PAGE SCRIPTS -->
 
   <style>
@@ -182,20 +182,20 @@ class="admin-validation-page sb-l-o sb-r-c onload-check" data-spy="scroll" data-
   </style>
 
   <!-- jQuery -->
-  <script src="vendor/jquery/jquery-1.11.1.min.js"></script>
-  <script src="vendor/jquery/jquery_ui/jquery-ui.min.js"></script>
+  <script src="{{asset('vendor/jquery/jquery-1.11.1.min.js')}}"></script>
+  <script src="{{asset('vendor/jquery/jquery_ui/jquery-ui.min.js')}}"></script>
 
   <!-- jQuery Validate Plugin-->
-  <script src="assets/admin-tools/admin-forms/js/jquery.validate.min.js"></script>
+  <script src="{{asset('assets/admin-tools/admin-forms/js/jquery.validate.min.js')}}"></script>
 
   <!-- jQuery Validate Addon -->
-  <script src="assets/admin-tools/admin-forms/js/additional-methods.min.js"></script>
+  <script src="{{asset('assets/admin-tools/admin-forms/js/additional-methods.min.js')}}"></script>
 
   <!-- Theme Javascript -->
-  <script src="<?php echo e(asset('assets/js/utility/utility.js')); ?>"></script>
-  <script src="<?php echo e(asset('assets/js/demo/demo.js')); ?>"></script>
-  <script src="<?php echo e(asset('assets/js/main.js')); ?>"></script>
-  <script type="text/javascript">
+  <script src="{{asset('assets/js/utility/utility.js')}}"></script>
+  <script src="{{asset('assets/js/demo/demo.js')}}"></script>
+  <script src="{{asset('assets/js/main.js')}}"></script>
+  <script type="text/javascript" >
   jQuery(document).ready(function() {
 
     "use strict";
@@ -206,7 +206,7 @@ class="admin-validation-page sb-l-o sb-r-c onload-check" data-spy="scroll" data-
     // Init Demo JS     
     Demo.init();
 
-    /* @custom  validation method (smartCaptcha) 
+    /* @custom validation method (smartCaptcha) 
     ------------------------------------------------------------------ */
 
     $.validator.methods.smartCaptcha = function(value, element, param) {
@@ -215,14 +215,14 @@ class="admin-validation-page sb-l-o sb-r-c onload-check" data-spy="scroll" data-
 
     $("#admin-form").validate({
 
-      /* @validation  states + elements 
+      /* @validation states + elements 
       ------------------------------------------- */
 
       errorClass: "state-error",
       validClass: "state-success",
       errorElement: "em",
 
-      /* @validation  rules 
+      /* @validation rules 
       ------------------------------------------ */
 
       rules: {
@@ -294,7 +294,7 @@ class="admin-validation-page sb-l-o sb-r-c onload-check" data-spy="scroll" data-
 
       },
 
-      /* @validation  error messages 
+      /* @validation error messages 
       ---------------------------------------------- */
 
       messages: {
@@ -362,7 +362,7 @@ class="admin-validation-page sb-l-o sb-r-c onload-check" data-spy="scroll" data-
 
       },
 
-      /* @validation  highlighting + error placement  
+      /* @validation highlighting + error placement  
       ---------------------------------------------------- */
 
       highlight: function(element, errorClass, validClass) {
@@ -479,6 +479,4 @@ class="admin-validation-page sb-l-o sb-r-c onload-check" data-spy="scroll" data-
   </script>
   <!-- END: PAGE SCRIPTS -->
 
-<?php $__env->stopSection(); ?>
-
-<?php echo $__env->make('layouts.default', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+@stop

@@ -30,13 +30,7 @@
         </div>
       </form>
       <ul class="nav navbar-nav navbar-right">
-				<li>
-					<div class="navbar-btn btn-group">
-	          <a href="#" class="topbar-menu-toggle btn btn-sm" data-toggle="button">
-		          <span class="ad ad-wand"></span>
-	          </a>
-	        </div>
-				</li>
+				
         <li class="dropdown menu-merge">
           <div class="navbar-btn btn-group">
             <button data-toggle="dropdown" class="btn btn-sm dropdown-toggle">

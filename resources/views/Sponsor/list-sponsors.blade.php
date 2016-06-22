@@ -1,26 +1,27 @@
-<?php $__env->startSection('title'); ?>
+@extends('layouts.default')
+@section('title')
     List sponsors
-<?php $__env->stopSection(); ?>
-<?php $__env->startSection('header'); ?>
+@stop
+@section('header')
    
 
   <!-- Font CSS (Via CDN) -->
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
 
   <!-- Datatables CSS -->
-  <link rel="stylesheet" type="text/css" href="<?php echo e(asset('vendor/plugins/datatables/media/css/dataTables.bootstrap.css')); ?>">
+  <link rel="stylesheet" type="text/css" href="{{asset('vendor/plugins/datatables/media/css/dataTables.bootstrap.css')}}">
 
   <!-- Datatables Editor Addon CSS -->
-  <link rel="stylesheet" type="text/css" href="<?php echo e(asset('vendor/plugins/datatables/extensions/Editor/css/dataTables.editor.css')); ?>">
+  <link rel="stylesheet" type="text/css" href="{{asset('vendor/plugins/datatables/extensions/Editor/css/dataTables.editor.css')}}">
 
   <!-- Datatables ColReorder Addon CSS -->
-  <link rel="stylesheet" type="text/css" href="<?php echo e(asset('vendor/plugins/datatables/extensions/ColReorder/css/dataTables.colReorder.min.css')); ?>">
+  <link rel="stylesheet" type="text/css" href="{{asset('vendor/plugins/datatables/extensions/ColReorder/css/dataTables.colReorder.min.css')}}">
 
   <!-- Theme CSS -->
-  <link rel="stylesheet" type="text/css" href="<?php echo e(asset('assets/skin/default_skin/css/theme.css')); ?>">
+  <link rel="stylesheet" type="text/css" href="{{asset('assets/skin/default_skin/css/theme.css')}}">
 
   <!-- Favicon -->
-  <link rel="shortcut icon" href="<?php echo e(asset('assets/img/favicon.ico')); ?>">
+  <link rel="shortcut icon" href="{{asset('assets/img/favicon.ico')}}">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
@@ -28,14 +29,14 @@
   <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 <![endif]-->
 
-<?php $__env->stopSection(); ?>
+@stop
 
-<?php $__env->startSection('body_atributes'); ?>
+@section('body_atributes')
 class="datatables-page sb-l-o sb-r-c onload-check" data-spy="scroll" data-target="#nav-spy" data-offset="300" style="min-height: 386px;"
-<?php $__env->stopSection(); ?>
+@stop
 
 
-<?php $__env->startSection('content_wrapper'); ?>
+@section('content_wrapper')
 <section id="content_wrapper">
 
       
@@ -44,15 +45,15 @@ class="datatables-page sb-l-o sb-r-c onload-check" data-spy="scroll" data-target
         <div class="topbar-left">
           <ol class="breadcrumb">
             <li class="crumb-active">
-              <a href="dashboard.html">Dashboard</a>
+              <a href="{{url('/')}}">Dashboard</a>
             </li>
             <li class="crumb-icon">
-              <a href="dashboard.html">
+              <a href="{{url('/')}}">
                 <span class="glyphicon glyphicon-home"></span>
               </a>
             </li>
             <li class="crumb-link">
-              <a href="index.html">Home</a>
+              <a href="{{url('/')}}">Home</a>
             </li>
             <li class="crumb-trail">List sponsors</li>
           </ol>
@@ -74,28 +75,25 @@ class="datatables-page sb-l-o sb-r-c onload-check" data-spy="scroll" data-target
           <div class="row">
             <div class="col-md-12">
               <!--errors with laravel alert -->
-              <?php if(Session::has('save-message')): ?>
+              @if(Session::has('save-message'))
               <div class="alert alert-success alert-dismissable">
               <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-              <i class="fa fa-check pr10"></i><?php echo e(Session::get('save-message')); ?>
-
+              <i class="fa fa-check pr10"></i>{{ Session::get('save-message') }}
                </div>
-              <?php endif; ?>
-              <?php if(Session::has('delete-message')): ?>
+              @endif
+              @if(Session::has('delete-message'))
                 <div class="alert alert-danger alert-dismissable">
                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-               <i class="fa fa-remove pr10"></i><?php echo e(Session::get('delete-message')); ?>
-
+               <i class="fa fa-remove pr10"></i>{{ Session::get('delete-message') }}
               </div>
-              <?php endif; ?> 
+              @endif 
               
-              <?php if(Session::has('update-message')): ?>
+              @if(Session::has('update-message'))
                 <div class="alert alert-alert alert-dismissable">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                 <i class="fa fa-check pr10"></i><?php echo e(Session::get('update-message')); ?>
-
+                 <i class="fa fa-check pr10"></i>{{ Session::get('update-message') }}
                 </div>
-              <?php endif; ?> 
+              @endif 
               <!--end alert with laravel  -->
               
               
@@ -151,10 +149,10 @@ class="datatables-page sb-l-o sb-r-c onload-check" data-spy="scroll" data-target
 
       </section>
       <!-- End: Content -->
-
+  @include('layouts.footer')
     </section>
-<?php $__env->stopSection(); ?>
-<?php $__env->startSection('script'); ?>
+@stop
+@section('script')
   <!-- BEGIN: PAGE SCRIPTS -->
 
   <!-- jQuery -->
@@ -162,26 +160,26 @@ class="datatables-page sb-l-o sb-r-c onload-check" data-spy="scroll" data-target
   <script src="vendor/jquery/jquery_ui/jquery-ui.min.js"></script>
 
   <!-- Datatables -->
-  <script src="<?php echo e(asset('vendor/plugins/datatables/media/js/jquery.dataTables.js')); ?>"></script>
+  <script src="{{asset('vendor/plugins/datatables/media/js/jquery.dataTables.js')}}"></script>
 
   <!-- Datatables Tabletools addon -->
-  <script src="<?php echo e(asset('vendor/plugins/datatables/extensions/TableTools/js/dataTables.tableTools.min.js')); ?>"></script>
+  <script src="{{asset('vendor/plugins/datatables/extensions/TableTools/js/dataTables.tableTools.min.js')}}"></script>
 
   <!-- Datatables ColReorder addon -->
-  <script src="<?php echo e(asset('vendor/plugins/datatables/extensions/ColReorder/js/dataTables.colReorder.min.js')); ?>"></script>
+  <script src="{{asset('vendor/plugins/datatables/extensions/ColReorder/js/dataTables.colReorder.min.js')}}"></script>
 
   <!-- Datatables Bootstrap Modifications  -->
-  <script src="<?php echo e(asset('vendor/plugins/datatables/media/js/dataTables.bootstrap.js')); ?>"></script>
+  <script src="{{asset('vendor/plugins/datatables/media/js/dataTables.bootstrap.js')}}"></script>
 
   <!-- Theme Javascript -->
-  <script src="<?php echo e(asset('assets/js/utility/utility.js')); ?>"></script>
-  <script src="<?php echo e(asset('assets/js/demo/demo.js')); ?>"></script>
-  <script src="<?php echo e(asset('assets/js/main.js')); ?>"></script>
+  <script src="{{asset('assets/js/utility/utility.js')}}"></script>
+  <script src="{{asset('assets/js/demo/demo.js')}}"></script>
+  <script src="{{asset('assets/js/main.js')}}"></script>
   <!-- java script confirmation 
   
-  <script src="<?php echo e(asset('assets/jsconfirmation/bootstrap.min.js')); ?>"></script>
-  <script src="<?php echo e(asset('assets/jsconfirmation/jquery.min.js')); ?>"></script>
-  <script src="<?php echo e(asset('assets/jsconfirmation/bootbox.min.js')); ?>"></script>
+  <script src="{{asset('assets/jsconfirmation/bootstrap.min.js')}}"></script>
+  <script src="{{asset('assets/jsconfirmation/jquery.min.js')}}"></script>
+  <script src="{{asset('assets/jsconfirmation/bootbox.min.js')}}"></script>
    java script confirmation -->
   <script type="text/javascript">
   jQuery(document).ready(function() {
@@ -467,6 +465,4 @@ class="datatables-page sb-l-o sb-r-c onload-check" data-spy="scroll" data-target
   </script>
   <!-- END: PAGE SCRIPTS -->
 
-<?php $__env->stopSection(); ?>
-
-<?php echo $__env->make('layouts.default', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+@stop

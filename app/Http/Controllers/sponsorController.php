@@ -16,12 +16,12 @@ class sponsorController extends Controller
         
         
         $show = DB::table('sm_sponsor') -> get () ; 
-        return View('list-sponsors')-> with ('data', $show); 
+        return View('Sponsor/list-sponsors')-> with ('data', $show); 
        }
        
     public function showcreatesponsors ()
     {
-        return View::make ('Sponsor-create');
+        return View::make ('Sponsor/Sponsor-create');
         }
     
     public function save (Request $request) 
@@ -66,7 +66,7 @@ class sponsorController extends Controller
     public function edit($id) 
     {
         $row =DB::table('sm_sponsor')->where('id',$id)->first();
-        return View('sponsor-edit')-> with ('row', $row);
+        return View('Sponsor/sponsor-edit')-> with ('row', $row);
         
     }
     
@@ -98,8 +98,7 @@ class sponsorController extends Controller
                    return redirect('list-sponsors');
                }
                  }
-       
-    
+          
      
 }
 

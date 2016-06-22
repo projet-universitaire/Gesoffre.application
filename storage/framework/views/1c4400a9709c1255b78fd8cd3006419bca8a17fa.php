@@ -33,49 +33,6 @@ class="admin-validation-page sb-l-o sb-r-c onload-check" data-spy="scroll" data-
 <?php $__env->startSection('content_wrapper'); ?>
 <section id="content_wrapper">
 
-      <!-- Start: Topbar-Dropdown -->
-      <div id="topbar-dropmenu" class="alt">
-        <div class="topbar-menu row">
-          <div class="col-xs-4 col-sm-2">
-            <a href="#" class="metro-tile bg-primary light">
-              <span class="glyphicon glyphicon-inbox text-muted"></span>
-              <span class="metro-title">Messages</span>
-            </a>
-          </div>
-          <div class="col-xs-4 col-sm-2">
-            <a href="#" class="metro-tile bg-info light">
-              <span class="glyphicon glyphicon-user text-muted"></span>
-              <span class="metro-title">Users</span>
-            </a>
-          </div>
-          <div class="col-xs-4 col-sm-2">
-            <a href="#" class="metro-tile bg-success light">
-              <span class="glyphicon glyphicon-headphones text-muted"></span>
-              <span class="metro-title">Support</span>
-            </a>
-          </div>
-          <div class="col-xs-4 col-sm-2">
-            <a href="#" class="metro-tile bg-system light">
-              <span class="glyphicon glyphicon-facetime-video text-muted"></span>
-              <span class="metro-title">Videos</span>
-            </a>
-          </div>
-          <div class="col-xs-4 col-sm-2">
-            <a href="#" class="metro-tile bg-warning light">
-              <span class="fa fa-gears text-muted"></span>
-              <span class="metro-title">Settings</span>
-            </a>
-          </div>
-          <div class="col-xs-4 col-sm-2">
-            <a href="#" class="metro-tile bg-alert light">
-              <span class="glyphicon glyphicon-picture text-muted"></span>
-              <span class="metro-title">Pictures</span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <!-- End: Topbar-Dropdown -->
-
       <!-- Start: Topbar -->
       <header id="topbar" class="alt">
         <div class="topbar-left">
@@ -91,27 +48,10 @@ class="admin-validation-page sb-l-o sb-r-c onload-check" data-spy="scroll" data-
             <li class="crumb-link">
               <a href="index.html">Home</a>
             </li>
-            <li class="crumb-trail">Dashboard</li>
+            <li class="crumb-trail">Create Sponsor</li>
           </ol>
         </div>
-        <div class="topbar-right">
-          <div class="ib topbar-dropdown">
-            <label for="topbar-multiple" class="control-label pr10 fs11 text-muted">Reporting Period</label>
-            <select id="topbar-multiple" class="hidden" style="display: none;">
-              <optgroup label="Filter By:">
-                <option value="1-1">Last 30 Days</option>
-                <option value="1-2" selected="selected">Last 60 Days</option>
-                <option value="1-3">Last Year</option>
-              </optgroup>
-            </select><div class="btn-group"><button type="button" class="multiselect dropdown-toggle btn btn-default btn-sm ph15" data-toggle="dropdown" title="Last 60 Days">Last 60 Days <b class="caret"></b></button><ul class="multiselect-container dropdown-menu pull-right"><li class="multiselect-item multiselect-group"><label>Filter By:</label></li><li><a href="javascript:void(0);"><label class="radio"><input type="radio" value="1-1"> Last 30 Days</label></a></li><li class="active"><a href="javascript:void(0);"><label class="radio"><input type="radio" value="1-2"> Last 60 Days</label></a></li><li><a href="javascript:void(0);"><label class="radio"><input type="radio" value="1-3"> Last Year</label></a></li></ul></div>
-          </div>
-          <div class="ml15 ib va-m" id="toggle_sidemenu_r">
-            <a href="#" class="pl5">
-              <i class="fa fa-sign-in fs22 text-primary"></i>
-              <span class="badge badge-hero badge-danger">3</span>
-            </a>
-          </div>
-        </div>
+        
       </header>
       <!-- End: Topbar -->
 
@@ -119,7 +59,7 @@ class="admin-validation-page sb-l-o sb-r-c onload-check" data-spy="scroll" data-
       <section id="content" class="table-layout">
 
         <!-- begin: .tray-center -->
-        <div class="tray tray-center" style="height: 399px;">
+        <div class="tray tray-center" style="height: 399px; padding-top: 10px;">
  
 
             <!-- Validation Example -->

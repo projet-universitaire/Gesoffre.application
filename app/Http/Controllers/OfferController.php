@@ -12,7 +12,7 @@ class OfferController extends Controller
     public function show (){
         
        
-        return View::make ('Offer-create');
+        return View::make ('Offer/Offer-create');
         
     }
      
