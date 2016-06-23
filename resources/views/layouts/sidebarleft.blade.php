@@ -95,7 +95,7 @@
                 <a href="">
                     <span class="fa fa-cube"></span> List Offers</a>
             </li>
-            <li{{ (current_page("offer/create")) ? 'class=active' : ''}}>
+            <li {{ (current_page("offer/create")) ? 'class=active' : ''}}>
                 <a href="{{url('offer/create')}}">
                     <span class="fa fa-desktop"></span> Add New Offer </a>
             </li>
