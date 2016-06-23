@@ -31,7 +31,7 @@ class="admin-validation-page" data-spy="scroll" data-target="#nav-spy" data-offs
 @section('content_wrapper')
 <!-- Start: Content-Wrapper -->
 
-
+<h1>hello</h1>
 
 
         <!-- Begin: Content -->
