@@ -329,16 +329,18 @@ class="admin-validation-page" data-spy="scroll" data-target="#nav-spy" data-offs
                                         </div>
                                     </div>
                      <!-- end image javascript  -->
-                     <!-- button add more creatives  -->
                      
-                     <div align='center'><button type="button" class="btn btn-sm btn-primary btn-block add_field_button">Add More Creatives</button></div>
-                     <!--end  button add more creatives  -->
                      <!-- end  rows  -->
                      </div>
                      <!-- end  rows  -->
                      <!-- traitement more cretives -->
                     </div>
                      <!-- end traitement more cretives -->
+                     
+                     <!-- button add more creatives  -->
+                     <div align='center'><button type="button" class="btn btn-sm btn-primary btn-block add_field_button">Add More Creatives</button></div>
+                     <!--end  button add more creatives  -->
+                     
                  <!-- end .form-body section -->
                   </div>
                   <!-- end .form-body section -->
