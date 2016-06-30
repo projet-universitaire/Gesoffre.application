@@ -1,4 +1,3 @@
-
 <?php $__env->startSection('title'); ?>
     Edit Sponsor
 <?php $__env->stopSection(); ?>
@@ -134,8 +133,6 @@ class="admin-validation-page sb-l-o sb-r-c onload-check" data-spy="scroll" data-
                     <div class="section">
                       <label class="field select">
                         <select id="language" name="status" value="<?=$row->status ?>">
-                       
-
                           <option value="">Select Status...</option>
                           <option value="Enable">Enable</option>
                           <option value="Disable">Disable</option>
@@ -150,7 +147,8 @@ class="admin-validation-page sb-l-o sb-r-c onload-check" data-spy="scroll" data-
               <!-- end .form-body section -->
               <div class="panel-footer text-right">
                 <button type="submit" class="button btn-primary"> Validate change </button>
-                <button type="reset" class="button btn-primary"> Cancel </button>
+                <button type="reset" class="button btn-primary"> Reset </button>
+                <a href="<?php echo e(url('list-sponsors')); ?>" class="button btn-primary"> Cancel </a>
               </div>
               <!-- end .form-footer section -->
             </form>

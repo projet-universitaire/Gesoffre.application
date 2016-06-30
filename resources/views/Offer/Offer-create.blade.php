@@ -85,7 +85,7 @@ class="admin-validation-page" data-spy="scroll" data-target="#nav-spy" data-offs
                       <div class="col-md-6">
                        <div class="section">
                         <label class="field select">
-                        <select id="language" name="language">
+                        <select id="type" name="type">
                           <option value="">Type</option>
                           <option value="Email">Email</option>
                           <option value="Landing Page">Landing Page</option>
@@ -98,7 +98,7 @@ class="admin-validation-page" data-spy="scroll" data-target="#nav-spy" data-offs
                       <div class="col-md-6">
                       <div class="section">
                         <label for="firstname" class="field prepend-icon">
-                          <input type="text" name="firstname" id="firstname" class="gui-input" placeholder="Offer Name...">
+                          <input type="text" name="label" id="label" class="gui-input" placeholder="Offer Name...">
                           <label for="firstname" class="field-icon">
                             <i class="fa fa-pencil-square-o"></i>
                           </label>
@@ -112,7 +112,7 @@ class="admin-validation-page" data-spy="scroll" data-target="#nav-spy" data-offs
                       <div class="section">
                       
                         <label class="field select">
-                        <select id="language" name="language">
+                        <select id="sponsor" name="sponsor">
                           <option value="">Select Sponsor...</option>
                           <option value="EN">English</option>
                           <option value="FR">French</option>
@@ -127,7 +127,7 @@ class="admin-validation-page" data-spy="scroll" data-target="#nav-spy" data-offs
                       <div class="section">
                       
                         <label for="lastname" class="field prepend-icon">
-                          <input type="text" name="lastname" id="lastname" class="gui-input" placeholder="Sponsor offer Id...">
+                          <input type="text" name="sponsoroffer" id="sponsoroffer" class="gui-input" placeholder="Sponsor offer Id...">
                           <label for="lastname" class="field-icon">
                             <i class="fa fa-user"></i>
                           </label>
@@ -139,7 +139,7 @@ class="admin-validation-page" data-spy="scroll" data-target="#nav-spy" data-offs
                      <div class="section"> 
                       
                         <label class="field select">
-                        <select id="language" name="language">
+                        <select id="Categorie" name="Categorie">
                           <option value="">Select Categorie...</option>
                           <option value="EN">English</option>
                           <option value="FR">French</option>
@@ -156,7 +156,7 @@ class="admin-validation-page" data-spy="scroll" data-target="#nav-spy" data-offs
                       <div class="col-md-6">
                       <div class="section">
                         <label class="field select">
-                        <select id="language" name="language">
+                        <select id="Country" name="Country">
                           <option value="">Country</option>
                           <option value="US">US</option>
                           <option value="UK">UK</option>
@@ -171,7 +171,7 @@ class="admin-validation-page" data-spy="scroll" data-target="#nav-spy" data-offs
                       <div class="col-md-6">
                       <div class="section">
                         <label class="field select">
-                        <select id="language" name="language">
+                        <select id="Status" name="Status">
                           <option value="">Select Status...</option>
                           <option value="Active">Active</option>
                           <option value="Inactive">Inactive</option>
@@ -186,7 +186,7 @@ class="admin-validation-page" data-spy="scroll" data-target="#nav-spy" data-offs
                       <div class="section">
                       
                         <label for="lastname" class="field prepend-icon">
-                          <input type="text" name="lastname" id="lastname" class="gui-input" placeholder="Payout...">
+                          <input type="text" name="payout" id="payout" class="gui-input" placeholder="Payout...">
                           <label for="lastname" class="field-icon">
                             <i class="fa fa-money"></i>
                           </label>
@@ -197,7 +197,7 @@ class="admin-validation-page" data-spy="scroll" data-target="#nav-spy" data-offs
                        <div class="col-md-6">
                       <div class="section">
                         <label class="field select">
-                        <select id="language" name="language">
+                        <select id="paymentmethode" name="paymentmethode">
                           <option value="">Payment Method...</option>
                           <option value="CPC: Cost Per Clic">CPC: Cost Per Clic</option>
                           <option value="CPL: Cost Per Lead">CPL: Cost Per Lead</option>
@@ -220,7 +220,7 @@ class="admin-validation-page" data-spy="scroll" data-target="#nav-spy" data-offs
                     <!--forms-->
                     <div class="section" id="spy3">
                       <label for="comment" class="field prepend-icon">
-                        <textarea class="gui-textarea" id="comment" name="comment" placeholder="Your forms"></textarea>
+                        <textarea class="gui-textarea" id="forms" name="forms" placeholder="Your forms"></textarea>
                         <label for="comment" class="field-icon">
                           <i class="fa fa-tasks"></i>
                         </label>
@@ -233,7 +233,7 @@ class="admin-validation-page" data-spy="scroll" data-target="#nav-spy" data-offs
                     <!--Subjects-->
                     <div class="section" id="spy3">
                       <label for="comment" class="field prepend-icon">
-                        <textarea class="gui-textarea" id="comment" name="comment" placeholder="Your subjects"></textarea>
+                        <textarea class="gui-textarea" id="subjects" name="subjects" placeholder="Your subjects"></textarea>
                         <label for="comment" class="field-icon">
                           <i class="fa fa-tasks"></i>
                         </label>
@@ -252,7 +252,7 @@ class="admin-validation-page" data-spy="scroll" data-target="#nav-spy" data-offs
 
                     <div class="section">
                       <label for="website" class="field prepend-icon">
-                        <input type="url" name="website" id="website" class="gui-input" placeholder="Opt-In..">
+                        <input type="url" name="OptIn" id="OptIn" class="gui-input" placeholder="Opt-In..">
                         <label for="website" class="field-icon">
                           <i class="fa fa-globe"></i>
                         </label>
@@ -261,7 +261,7 @@ class="admin-validation-page" data-spy="scroll" data-target="#nav-spy" data-offs
                     <!-- end section -->
                     <div class="section">
                       <label for="useremail" class="field prepend-icon">
-                        <input type="email" name="useremail" id="useremail" class="gui-input" placeholder="Opt-Out..">
+                        <input type="email" name="OptOut" id="OptOut" class="gui-input" placeholder="Opt-Out..">
                         <label for="useremail" class="field-icon">
                           <i class="fa fa-external-link"></i>
                         </label>
@@ -288,7 +288,7 @@ class="admin-validation-page" data-spy="scroll" data-target="#nav-spy" data-offs
                           <div class="col-md-8">
                     <div class="section">
                         <label for="firstname" class="field prepend-icon">
-                          <input type="text" name="firstname" id="firstname" class="gui-input" placeholder="Creative name...">
+                          <input type="text" name="Creative" id="Creative" class="gui-input" placeholder="Creative name...">
                           <label for="firstname" class="field-icon">
                             <i class="fa fa-star-half-empty"></i>
                           </label>
@@ -302,8 +302,8 @@ class="admin-validation-page" data-spy="scroll" data-target="#nav-spy" data-offs
                     <div class="section" id="spy2">
                       <label for="file1" class="field file">
                         <span class="button btn-primary"> Choose File </span>
-                        <input type="file" class="gui-file" name="upload1" id="file1" onchange="document.getElementById('uploader1').value = this.value;">
-                        <input type="text" class="gui-input" id="uploader1" placeholder="Opt-In file.." readonly="">
+                        <input type="file" class="gui-file" name="optinfile" id="optinfile" onchange="document.getElementById('uploader1').value = this.value;">
+                        <input type="text" class="gui-input" id="optinfile" placeholder="Opt-In file.." readonly="">
                       </label>
                     </div>
                            
@@ -313,8 +313,8 @@ class="admin-validation-page" data-spy="scroll" data-target="#nav-spy" data-offs
                     <div class="section" id="spy2">
                       <label for="file1" class="field file">
                         <span class="button btn-primary"> Choose File </span>
-                        <input type="file" class="gui-file" name="upload1" id="file1" onchange="document.getElementById('uploader1').value = this.value;">
-                        <input type="text" class="gui-input" id="uploader1" placeholder="Op-Out file.." readonly="">
+                        <input type="file" class="gui-file" name="optoutfile" id="optoutfile" onchange="document.getElementById('uploader1').value = this.value;">
+                        <input type="text" class="gui-input" id="optoutfile" placeholder="Op-Out file.." readonly="">
                       </label>
                     </div>
                          </div>
@@ -430,11 +430,60 @@ class="admin-validation-page" data-spy="scroll" data-target="#nav-spy" data-offs
       ------------------------------------------ */
 
       rules: {
-        firstname: {
+        type: {
+          required: true
+        },  
+        label: {
           required: true
         },
-        lastname: {
+        sponsor: {
           required: true
+        },
+        sponsoroffer: {
+          required: true
+        },
+        Categorie:{
+            required:true 
+        },
+        Country:{
+            required:true 
+        },
+        Status:{
+            required:true 
+        },
+        payout:{
+            required:true,
+            number: true
+        },
+        paymentmethode:{
+            required:true
+        },
+        forms: {
+          required: true,
+          minlength: 10
+        },
+        subjects: {
+          required: true,
+          minlength: 10
+        },
+        OptIn: {
+          required: true,
+          url: true
+        },
+        OptOut: {
+          required: true,
+          url: true
+        },
+        Creative: {
+            required:true
+        },
+        optinfile: {
+          required: true,
+          extension: "jpg|png|gif|jpeg|rar|zip"
+        },
+        optoutfile: {
+          required: true,
+          extension: "jpg|png|gif|jpeg|rar|zip"
         },
         useremail: {
           required: true,
@@ -443,7 +492,7 @@ class="admin-validation-page" data-spy="scroll" data-target="#nav-spy" data-offs
         website: {
           required: true,
           url: true
-        },
+        },     
         language: {
           required: true
         },
@@ -504,11 +553,59 @@ class="admin-validation-page" data-spy="scroll" data-target="#nav-spy" data-offs
       ---------------------------------------------- */
 
       messages: {
-        firstname: {
-          required: 'Enter first name'
+        type: {
+          required: 'Chose a type'
         },
-        lastname: {
-          required: 'Enter last name'
+        label: {
+          required: 'Enter Offer name'
+        },
+        sponsor: {
+          required: 'Select sponsor'
+        },
+        sponsoroffer: {
+          required: 'Enter Sponsor Offer Id'
+        },
+         Categorie:{
+            required:'Select Categorie' 
+        },
+        Country:{
+            required:'Select Country' 
+        },       
+        Status:{
+            required:'Select Status' 
+        },
+        payout:{
+            required:'Enter payout' 
+        },
+        paymentmethode:{
+            required:'Select Payment Methode'
+        },
+        forms: {
+          required: 'Oops you forgot forms',
+          minlength: 'Enter at least 10 characters or more'
+        },
+        subjects: {
+          required: 'Oops you forgot subjects',
+          minlength: 'Enter at least 10 characters or more'
+        },
+        OptIn: {
+          required: 'Enter your Opt-In URL',
+          url: 'URL should start with - http://www'
+        },
+        OptOut: {
+          required: 'Enter your Opt-Out URL',
+          url: 'URL should start with - http://www'
+        },
+        Creative: {
+            required:'Enter Creative name'
+        },
+        optinfile: {
+          required: 'Please browse a Opt-In file',
+          extension: 'File format not supported'
+        },
+        optoutfile: {
+          required: 'Please browse a Opt-Out file',
+          extension: 'File format not supported'
         },
         useremail: {
           required: 'Enter email address',
@@ -518,6 +615,7 @@ class="admin-validation-page" data-spy="scroll" data-target="#nav-spy" data-offs
           required: 'Enter your website URL',
           url: 'URL should start with - http://www'
         },
+        
         language: {
           required: 'Choose a language'
         },
@@ -697,9 +795,9 @@ class="admin-validation-page" data-spy="scroll" data-target="#nav-spy" data-offs
                     '<div class="section row">' +
                     '<div class="col-md-8">' +
                     '<div class="section">' +
-                    '<label for="creativeName" class="field prepend-icon">' +
-                    '<input name="labelCreatives[]" id="labelCreative" class="gui-input" placeholder="Creative name..." type="text" aria-required="true">' +
-                    '<label for="creativeName" class="field-icon">' +
+                    '<label for="Creative" class="field prepend-icon">' +
+                    '<input name="Creative" id="Creative" class="gui-input" placeholder="Creative name..." type="text" aria-required="true">' +
+                    '<label for="Creative" class="field-icon">' +
                     '<i class="fa fa-star-half-empty"></i>' +
                     '</label>' +
                     '</label>' +

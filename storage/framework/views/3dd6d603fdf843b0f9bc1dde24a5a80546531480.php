@@ -97,10 +97,13 @@ class="datatables-page sb-l-o sb-r-c onload-check" data-spy="scroll" data-target
                 </div>
               <?php endif; ?> 
               <!--end alert with laravel  -->
+          
               
+            <div class="topbar-left hidden-xs hidden-sm">
+               <a href="<?php echo e(url('create-sponsors')); ?>" class="btn btn-default btn-sm fw600 ml10" style="margin-bottom: 10px;">
+            <span class="fa fa-plus pr5"></span> Add Sponsor</a>
+            </div>
               
-                   
-              <a href="<?php echo 'create-sponsors'?>">Add a New Sponsor</a><br>
                     <!-- end errors with laravel -->
               <div class="panel panel-visible" id="spy1">
                 <div class="panel-heading">
@@ -132,10 +135,22 @@ class="datatables-page sb-l-o sb-r-c onload-check" data-spy="scroll" data-target
                         <td><?php echo $row->login ?></td>
                         <td><?php echo $row->password ?></td>
                         <td><?php echo $row->status ?></td>
-                        <td>
-                            <a href="<?php echo 'editsponsor/'.$row ->id ?>" >Edit</a> |
-                            <a href="<?php echo 'deletesponsor/'.$row ->id ?>" onclick="return confirm('Are you sure you want to delete?')" >Delete</a>
-                
+                        
+                        <td class="text-right">
+                          <div class="btn-group">
+                            <button type="button" class="btn btn-info btn-sm fs12 fw500 dropdown-toggle ph10" data-toggle="dropdown" aria-expanded="false">
+                              Action
+                              <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu pull-right" role="menu">
+                              <li>
+                                <a href="<?php echo 'editsponsor/'.$row ->id ?>">Edit</a>
+                              </li>
+                              <li>
+                                <a href="<?php echo 'deletesponsor/'.$row ->id ?>" onclick="return confirm('Are you sure you want to delete?')" >Delete</a>
+                              </li>      
+                            </ul>
+                          </div>
                         </td>
                     </tr>
                     <?php } ?>   
@@ -158,8 +173,8 @@ class="datatables-page sb-l-o sb-r-c onload-check" data-spy="scroll" data-target
   <!-- BEGIN: PAGE SCRIPTS -->
 
   <!-- jQuery -->
-  <script src="vendor/jquery/jquery-1.11.1.min.js"></script>
-  <script src="vendor/jquery/jquery_ui/jquery-ui.min.js"></script>
+  <script src="<?php echo e(asset('vendor/jquery/jquery-1.11.1.min.js')); ?>"></script>
+  <script src="<?php echo e(asset('vendor/jquery/jquery_ui/jquery-ui.min.js')); ?>"></script>
 
   <!-- Datatables -->
   <script src="<?php echo e(asset('vendor/plugins/datatables/media/js/jquery.dataTables.js')); ?>"></script>

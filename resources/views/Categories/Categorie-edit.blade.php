@@ -1,6 +1,6 @@
 @extends('layouts.default')
 @section('title')
-    Edit Sponsor
+    Edit Categorie
 @stop
 @section('header')
 <!-- Font CSS (Via CDN) -->
@@ -49,7 +49,7 @@ class="admin-validation-page sb-l-o sb-r-c onload-check" data-spy="scroll" data-
             <li class="crumb-link">
               <a href="index.html">Home</a>
             </li>
-            <li class="crumb-trail">Edit Sponsor</li>
+            <li class="crumb-trail">Edit Categorie</li>
           </ol>
         </div>
        
@@ -68,13 +68,13 @@ class="admin-validation-page sb-l-o sb-r-c onload-check" data-spy="scroll" data-
 
               <div class="panel heading-border panel-primary">
 
-                <form method="post" action="{{action('sponsorController@update')}}" id="admin-form" novalidate="novalidate">
+                <form method="post" action="{{action('CategorieController@update')}}" id="admin-form" novalidate="novalidate">
                     <input type="hidden"  name="_token" value="<?= csrf_token(); ?>">
 
                   <div class="panel-body bg-light">
 
                     <div class="section-divider mt20 mb40">
-                      <span> Edit Sponsor </span>
+                      <span> Edit Categorie </span>
                     </div>
                     <!-- .section-divider -->
                     <!--errors with laravel -->
@@ -96,60 +96,14 @@ class="admin-validation-page sb-l-o sb-r-c onload-check" data-spy="scroll" data-
                           </label>
                         </label>
                      </div>
-                      <!-- end section -->
-                      <p>Website URL : </p>
-                      <div class="section">
-                      <label for="website" class="field prepend-icon">
-                        <input type="url" name="Website" id="website" class="gui-input" value="<?=$row->Website ?>" >
-                        <label for="website" class="field-icon">
-                          <i class="fa fa-globe"></i>
-                        </label>
-                      </label>
-                    </div>
-                     <!-- end section -->
-                     <p>Login :</p>
-                      <div class="section">
-                        <label for="Login" class="field prepend-icon">
-                          <input type="text" name="login" id="Login" class="gui-input" value="<?=$row->login ?>">
-                          <label for="lastname" class="field-icon">
-                            <i class="fa fa-user"></i>
-                          </label>
-                        </label>
-                      </div>
-                
-                    <!-- end .section row section -->
-                    <p>Password : </p>
-                    <div class="section">
-                        <label for="password" class="field prepend-icon">
-                          <input type="text" name="password" id="password" class="gui-input"value="<?=$row->password ?>" >
-                          <label for="password" class="field-icon">
-                            <i class="fa fa-unlock-alt"></i>
-                          </label>
-                        </label>
-                    </div>    
-                    
-                    <!-- end section -->
-
-                    <p>label : </p>
-                    <div class="section">
-                      <label class="field select">
-                        <select id="language" name="status" value="<?=$row->status ?>">
-                          <option value="">Select Status...</option>
-                          <option value="Enable">Enable</option>
-                          <option value="Disable">Disable</option>
-                          <option value="Coming Soon">Coming Soon</option>
-                         
-                        </select>
-                        <i class="arrow double"></i>
-                      </label>
-                    </div>
+                     
                     <!-- end section --> 
                   </div>
               <!-- end .form-body section -->
               <div class="panel-footer text-right">
                 <button type="submit" class="button btn-primary"> Validate change </button>
                 <button type="reset" class="button btn-primary"> Reset </button>
-                <a href="{{url('list-sponsors')}}" class="button btn-primary"> Cancel </a>
+                <a href="{{url('Categorie-list')}}" class="button btn-primary"> Cancel </a>
               </div>
               <!-- end .form-footer section -->
             </form>
@@ -229,70 +183,7 @@ class="admin-validation-page sb-l-o sb-r-c onload-check" data-spy="scroll" data-
       rules: {
         label: {
           required: true
-        },
-        login: {
-          required: true
-        },
-        useremail: {
-          required: true,
-          email: true
-        },
-        Website: {
-          required: true,
-          url: true
-        },
-        status: {
-          required: true
-        },
-        upload1: {
-          required: true,
-          extension: "jpg|png|gif|jpeg|doc|docx|pdf|xls|rar|zip"
-        },
-        mobileos: {
-          required: true
-        },
-        comment: {
-          required: true,
-          minlength: 30
-        },
-        mobile_phone: {
-          require_from_group: [1, ".phone-group"]
-        },
-        home_phone: {
-          require_from_group: [1, ".phone-group"]
-        },
-        password: {
-          required: true
-        },
-        repeatPassword: {
-          required: true,
-          minlength: 6,
-          maxlength: 16,
-          equalTo: '#password'
-        },
-        gender: {
-          required: true
-        },
-        languages: {
-          required: true
-        },
-        verification: {
-          required: true,
-          smartCaptcha: 19
-        },
-        applicant_age: {
-          required: true,
-          min: 16
-        },
-        licence_no: {
-          required: function(element) {
-            return $("#applicant_age").val() > 19;
-          }
-        },
-        child_name: {
-          required: "#parents:checked"
-        }
-
+        }       
       },
 
       /* @validation error messages 
@@ -301,64 +192,6 @@ class="admin-validation-page sb-l-o sb-r-c onload-check" data-spy="scroll" data-
       messages: {
         label: {
           required: 'Enter Label'
-        },
-        login: {
-          required: 'Enter Login'
-        },
-        useremail: {
-          required: 'Enter password'
-          
-        },
-        Website: {
-          required: 'Enter  website URL',
-          url: 'URL should start with - http://www'
-        },
-        status: {
-          required: 'Choose a Status'
-        },
-        upload1: {
-          required: 'Please browse a file',
-          extension: 'File format not supported'
-        },
-        mobileos: {
-          required: 'Please select a mobile platform'
-        },
-        comment: {
-          required: 'Oops you forgot to comment',
-          minlength: 'Enter at least 30 characters or more'
-        },
-        mobile_phone: {
-          require_from_group: 'Fill at least a mobile contact'
-        },
-        home_phone: {
-          require_from_group: 'Fill at least a home contact'
-        },
-        password: {
-          required: 'Please enter the password'
-        },
-        repeatPassword: {
-          required: 'Please repeat the above password',
-          equalTo: 'Password mismatch detected'
-        },
-        gender: {
-          required: 'Please choose specie'
-        },
-        languages: {
-          required: 'Select laguages spoken'
-        },
-        verification: {
-          required: 'Please enter verification code',
-          smartCaptcha: 'Oops - enter a correct verification code'
-        },
-        applicant_age: {
-          required: 'Enter applicant age',
-          min: 'Must be 16 years and above'
-        },
-        licence_no: {
-          required: 'Enter licence number'
-        },
-        child_name: {
-          required: 'Please enter your childs name'
         }
 
       },

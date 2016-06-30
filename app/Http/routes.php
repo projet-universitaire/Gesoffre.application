@@ -1,5 +1,5 @@
 <?php
-//offer controller 
+//offer controller
 
     Route::get('offer/create',
                 array(
@@ -15,7 +15,7 @@
 
 
 //the sponsor controller 
-Route::post('save','sponsorController@save');
+Route::post('saves','sponsorController@save');
 Route::get('deletesponsor/{id}','sponsorController@delete');
 Route::get('editsponsor/{id}','sponsorController@edit');
 Route::post('update','sponsorController@update');
@@ -33,3 +33,14 @@ Route::get('create-sponsors',
                 )
             );
 //end sponsor Controlller
+
+//the Categorie controllers
+Route::get('Categorie-create','CategorieController@show');
+Route::get('Categorie-list','CategorieController@showlist');
+Route::post('save','CategorieController@save');
+
+Route::get('/deletecategorie/{id}','CategorieController@delete');
+
+Route::get('/editcategorie/{id}','CategorieController@edit');
+Route::post('update','CategorieController@update');
+//end the Categorie controllers

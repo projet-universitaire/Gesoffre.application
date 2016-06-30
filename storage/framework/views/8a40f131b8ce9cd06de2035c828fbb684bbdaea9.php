@@ -29,8 +29,336 @@ class="admin-validation-page" data-spy="scroll" data-target="#nav-spy" data-offs
 
 <?php $__env->startSection('content_wrapper'); ?>
 
+<section id="content_wrapper">
 
+      <!-- Start: Topbar-Dropdown -->
+      
+      <!-- End: Topbar-Dropdown -->
 
+      <!-- Start: Topbar -->
+      <header id="topbar" class="alt">
+        <div class="topbar-left">
+          <ol class="breadcrumb">
+            <li class="crumb-active">
+              <a href="<?php echo e(url('/')); ?>">Dashboard</a>
+            </li>
+            <li class="crumb-icon">
+              <a href="dashboard.html">
+                <span class="glyphicon glyphicon-home"></span>
+              </a>
+            </li>
+            <li class="crumb-link">
+              <a href="<?php echo e(url('/')); ?>">Home</a>
+            </li>
+            <li class="crumb-trail">Create Offer</li>
+          </ol>
+        </div>
+        
+      </header>
+      <!-- End: Topbar -->
+
+      <!-- Begin: Content -->
+      <section id="content" class="table-layout">
+
+        <!-- begin: .tray-center -->
+        <div class="tray tray-center" style="height: 629px;">
+
+            <!-- Begin: Content Header -->
+
+            <!-- Validation Example -->
+            <div class="admin-form theme-primary mw1000 center-block" style="padding-bottom: 175px;">
+
+              <div class="panel heading-border panel-primary">
+
+                <form method="post" action="http://admindesigns.com/" id="admin-form" novalidate="novalidate">
+
+                  <div class="panel-body bg-light">
+
+                    <div class="section-divider mt20 mb40">
+                      <span> Offer information </span>
+                    </div>
+                    <!-- .section-divider -->
+
+                    <div class="section row" id="spy1">
+                        
+                      <div class="col-md-6">
+                       <div class="section">
+                        <label class="field select">
+                        <select id="type" name="type">
+                          <option value="">Type</option>
+                          <option value="Email">Email</option>
+                          <option value="Landing Page">Landing Page</option>
+                        </select>
+                        <i class="arrow double"></i>
+                      </label> 
+                      </div>
+                      </div>
+                        
+                      <div class="col-md-6">
+                      <div class="section">
+                        <label for="firstname" class="field prepend-icon">
+                          <input type="text" name="label" id="label" class="gui-input" placeholder="Offer Name...">
+                          <label for="firstname" class="field-icon">
+                            <i class="fa fa-pencil-square-o"></i>
+                          </label>
+                        </label>
+                      </div>
+                      </div>
+                          
+                       
+                      <!-- end section -->
+                      <div class="col-md-6">
+                      <div class="section">
+                      
+                        <label class="field select">
+                        <select id="sponsor" name="sponsor">
+                          <option value="">Select Sponsor...</option>
+                          <option value="EN">English</option>
+                          <option value="FR">French</option>
+                        </select>
+                        <i class="arrow double"></i>
+                      </label> 
+                      </div>
+                      </div>
+                      <!-- end section -->
+                    
+                      <div class="col-md-6">
+                      <div class="section">
+                      
+                        <label for="lastname" class="field prepend-icon">
+                          <input type="text" name="sponsoroffer" id="sponsoroffer" class="gui-input" placeholder="Sponsor offer Id...">
+                          <label for="lastname" class="field-icon">
+                            <i class="fa fa-user"></i>
+                          </label>
+                        </label>
+                      </div>
+                      </div>
+                      <!-- end section -->
+                     <div class="col-md-6">
+                     <div class="section"> 
+                      
+                        <label class="field select">
+                        <select id="Categorie" name="Categorie">
+                          <option value="">Select Categorie...</option>
+                          <option value="EN">English</option>
+                          <option value="FR">French</option>
+                          <option value="SP">Spanish</option>
+                          <option value="CH">Chinese</option>
+                          <option value="JP">Japanese</option>
+                        </select>
+                        <i class="arrow double"></i>
+                      </label> 
+                      </div>
+                      </div>
+                      
+                      <!-- end section -->
+                      <div class="col-md-6">
+                      <div class="section">
+                        <label class="field select">
+                        <select id="Country" name="Country">
+                          <option value="">Country</option>
+                          <option value="US">US</option>
+                          <option value="UK">UK</option>
+                          <option value="CA">CA</option>
+                          <option value="AU">AU</option>
+                        </select>
+                        <i class="arrow double"></i>
+                      </label> 
+                      </div>
+                      </div>   
+                      <!-- end section -->
+                      <div class="col-md-6">
+                      <div class="section">
+                        <label class="field select">
+                        <select id="Status" name="Status">
+                          <option value="">Select Status...</option>
+                          <option value="Active">Active</option>
+                          <option value="Inactive">Inactive</option>
+                          <option value=" Coming soon">Coming soon</option>
+                        </select>
+                        <i class="arrow double"></i>
+                      </label> 
+                      </div>
+                      </div>
+                      <!-- end section -->
+                      <div class="col-md-6">
+                      <div class="section">
+                      
+                        <label for="lastname" class="field prepend-icon">
+                          <input type="text" name="payout" id="payout" class="gui-input" placeholder="Payout...">
+                          <label for="lastname" class="field-icon">
+                            <i class="fa fa-money"></i>
+                          </label>
+                        </label>
+                      </div>
+                      </div>
+                      <!--end section-->
+                       <div class="col-md-6">
+                      <div class="section">
+                        <label class="field select">
+                        <select id="paymentmethode" name="paymentmethode">
+                          <option value="">Payment Method...</option>
+                          <option value="CPC: Cost Per Clic">CPC: Cost Per Clic</option>
+                          <option value="CPL: Cost Per Lead">CPL: Cost Per Lead</option>
+                          <option value="CPS: Cost Per Sale">CPS: Cost Per Sale</option>
+                          <option value="CPA: Cost Per Action">CPA: Cost Per Action</option>
+                        </select>
+                        <i class="arrow double"></i>
+                      </label> 
+                      </div>
+                      </div>
+                      <!--end section-->
+                    
+                    <!--end rows-->
+                    </div> 
+                    <!--end rows-->
+                    <!-- end .section row section -->
+                    <div class="section-divider mt20 mb40">
+                      <span> Forms and Subjects </span>
+                    </div>
+                    <!--forms-->
+                    <div class="section" id="spy3">
+                      <label for="comment" class="field prepend-icon">
+                        <textarea class="gui-textarea" id="forms" name="forms" placeholder="Your forms"></textarea>
+                        <label for="comment" class="field-icon">
+                          <i class="fa fa-tasks"></i>
+                        </label>
+                        <span class="input-footer">
+                          <strong>Forms:</strong> Paste your forms..
+                        </span>
+                      </label>
+                    </div>
+                    <!--end forms-->
+                    <!--Subjects-->
+                    <div class="section" id="spy3">
+                      <label for="comment" class="field prepend-icon">
+                        <textarea class="gui-textarea" id="subjects" name="subjects" placeholder="Your subjects"></textarea>
+                        <label for="comment" class="field-icon">
+                          <i class="fa fa-tasks"></i>
+                        </label>
+                        <span class="input-footer">
+                          <strong>subjects:</strong> Paste your subjects..
+                        </span>
+                      </label>
+                    </div>
+                    <!--end subjects-->
+                    <div class="section-divider mt20 mb40">
+                      <span> Redirections links </span>
+                    </div>
+                    
+                   
+                    <!-- end section -->
+
+                    <div class="section">
+                      <label for="website" class="field prepend-icon">
+                        <input type="url" name="OptIn" id="OptIn" class="gui-input" placeholder="Opt-In..">
+                        <label for="website" class="field-icon">
+                          <i class="fa fa-globe"></i>
+                        </label>
+                      </label>
+                    </div>
+                    <!-- end section -->
+                    <div class="section">
+                      <label for="useremail" class="field prepend-icon">
+                        <input type="email" name="OptOut" id="OptOut" class="gui-input" placeholder="Opt-Out..">
+                        <label for="useremail" class="field-icon">
+                          <i class="fa fa-external-link"></i>
+                        </label>
+                      </label>
+                    </div>
+                    <!-- end section -->
+                    <!-- SuppreFile -->
+                    <div class="section">
+                      <div class="option-group field">
+                        <label class="block mt15 option option-primary">
+                          <input type="checkbox" name="parents" id="parents" value="parents">
+                          <span class="checkbox"></span> Has Suppression file ?
+                        </label>
+                      </div>
+                     </div>
+                    <!--End SuppreFile-->
+                    
+                    <div class="section-divider mt20 mb40">
+                      <span> Creatives </span>
+                    </div>
+                     <!--offer name -->
+                    <div class="input_fields_wrap">
+                     <div class="row">
+                          <div class="col-md-8">
+                    <div class="section">
+                        <label for="firstname" class="field prepend-icon">
+                          <input type="text" name="Creative" id="Creative" class="gui-input" placeholder="Creative name...">
+                          <label for="firstname" class="field-icon">
+                            <i class="fa fa-star-half-empty"></i>
+                          </label>
+                        </label>
+                      </div>
+                     
+                    <!--end offer name -->
+                 
+                    <!-- end section -->
+                           
+                    <div class="section" id="spy2">
+                      <label for="file1" class="field file">
+                        <span class="button btn-primary"> Choose File </span>
+                        <input type="file" class="gui-file" name="optinfile" id="optinfile" onchange="document.getElementById('uploader1').value = this.value;">
+                        <input type="text" class="gui-input" id="optinfile" placeholder="Opt-In file.." readonly="">
+                      </label>
+                    </div>
+                           
+                    <!-- end  section -->
+                    <!-- end section -->
+                           
+                    <div class="section" id="spy2">
+                      <label for="file1" class="field file">
+                        <span class="button btn-primary"> Choose File </span>
+                        <input type="file" class="gui-file" name="optoutfile" id="optoutfile" onchange="document.getElementById('uploader1').value = this.value;">
+                        <input type="text" class="gui-input" id="optoutfile" placeholder="Op-Out file.." readonly="">
+                      </label>
+                    </div>
+                         </div>
+                    
+                    <!-- end  section  -->
+                    <!-- image javascript  -->
+                    <div class="col-md-4 hidden-xs">
+                                        <div class="fileupload fileupload-new admin-form" data-provides="fileupload">
+                                            <div class="fileupload-preview thumbnail mb20">
+                                                <img data-src="holder.js/100%x140" alt="100%x140" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTk1IiBoZWlnaHQ9IjE0MCIgdmlld0JveD0iMCAwIDE5NSAxNDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxkZWZzLz48cmVjdCB3aWR0aD0iMTk1IiBoZWlnaHQ9IjE0MCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjcxLjU0Njg3NSIgeT0iNzAiIHN0eWxlPSJmaWxsOiNBQUFBQUE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6MTBwdDtkb21pbmFudC1iYXNlbGluZTpjZW50cmFsIj4xOTV4MTQwPC90ZXh0PjwvZz48L3N2Zz4=" data-holder-rendered="true" style="height: 170px; width: 100%; display: block;">
+                                            </div>
+                                        </div>
+                                    </div>
+                     <!-- end image javascript  -->
+                     
+                     <!-- end  rows  -->
+                     </div>
+                     <!-- end  rows  -->
+                     <!-- traitement more cretives -->
+                    </div>
+                     <!-- end traitement more cretives -->
+                     
+                     <!-- button add more creatives  -->
+                     <div align='center'><button type="button" class="btn btn-sm btn-primary btn-block add_field_button">Add More Creatives</button></div>
+                     <!--end  button add more creatives  -->
+                     
+                 <!-- end .form-body section -->
+                  </div>
+                  <!-- end .form-body section -->
+                  <div class="panel-footer text-right">
+                    <button type="submit" class="button btn-primary"> Validate Form </button>
+                    <button type="reset" class="button btn-primary"> Reset </button>
+                    <a href="<?php echo e(url('/')); ?>" class="button btn-primary"> Cancel </a>
+                  </div>
+                  <!-- end .form-footer section -->
+                </form>
+              </div>
+            </div>
+            <!-- end: .admin-form -->
+        </div> 
+      </section>
+      <!-- End: Content -->
+    </section>
+
+      
 
 
 
@@ -101,11 +429,60 @@ class="admin-validation-page" data-spy="scroll" data-target="#nav-spy" data-offs
       ------------------------------------------ */
 
       rules: {
-        firstname: {
+        type: {
+          required: true
+        },  
+        label: {
           required: true
         },
-        lastname: {
+        sponsor: {
           required: true
+        },
+        sponsoroffer: {
+          required: true
+        },
+        Categorie:{
+            required:true 
+        },
+        Country:{
+            required:true 
+        },
+        Status:{
+            required:true 
+        },
+        payout:{
+            required:true,
+            number: true
+        },
+        paymentmethode:{
+            required:true
+        },
+        forms: {
+          required: true,
+          minlength: 10
+        },
+        subjects: {
+          required: true,
+          minlength: 10
+        },
+        OptIn: {
+          required: true,
+          url: true
+        },
+        OptOut: {
+          required: true,
+          url: true
+        },
+        Creative: {
+            required:true
+        },
+        optinfile: {
+          required: true,
+          extension: "jpg|png|gif|jpeg|rar|zip"
+        },
+        optoutfile: {
+          required: true,
+          extension: "jpg|png|gif|jpeg|rar|zip"
         },
         useremail: {
           required: true,
@@ -114,7 +491,7 @@ class="admin-validation-page" data-spy="scroll" data-target="#nav-spy" data-offs
         website: {
           required: true,
           url: true
-        },
+        },     
         language: {
           required: true
         },
@@ -175,11 +552,59 @@ class="admin-validation-page" data-spy="scroll" data-target="#nav-spy" data-offs
       ---------------------------------------------- */
 
       messages: {
-        firstname: {
-          required: 'Enter first name'
+        type: {
+          required: 'Chose a type'
         },
-        lastname: {
-          required: 'Enter last name'
+        label: {
+          required: 'Enter Offer name'
+        },
+        sponsor: {
+          required: 'Select sponsor'
+        },
+        sponsoroffer: {
+          required: 'Enter Sponsor Offer Id'
+        },
+         Categorie:{
+            required:'Select Categorie' 
+        },
+        Country:{
+            required:'Select Country' 
+        },       
+        Status:{
+            required:'Select Status' 
+        },
+        payout:{
+            required:'Enter payout' 
+        },
+        paymentmethode:{
+            required:'Select Payment Methode'
+        },
+        forms: {
+          required: 'Oops you forgot forms',
+          minlength: 'Enter at least 10 characters or more'
+        },
+        subjects: {
+          required: 'Oops you forgot subjects',
+          minlength: 'Enter at least 10 characters or more'
+        },
+        OptIn: {
+          required: 'Enter your Opt-In URL',
+          url: 'URL should start with - http://www'
+        },
+        OptOut: {
+          required: 'Enter your Opt-Out URL',
+          url: 'URL should start with - http://www'
+        },
+        Creative: {
+            required:'Enter Creative name'
+        },
+        optinfile: {
+          required: 'Please browse a Opt-In file',
+          extension: 'File format not supported'
+        },
+        optoutfile: {
+          required: 'Please browse a Opt-Out file',
+          extension: 'File format not supported'
         },
         useremail: {
           required: 'Enter email address',
@@ -189,6 +614,7 @@ class="admin-validation-page" data-spy="scroll" data-target="#nav-spy" data-offs
           required: 'Enter your website URL',
           url: 'URL should start with - http://www'
         },
+        
         language: {
           required: 'Choose a language'
         },
@@ -351,11 +777,71 @@ class="admin-validation-page" data-spy="scroll" data-target="#nav-spy" data-offs
     }, 800);
 
 
+  //Adding dynamically inputs
+
+            var max_fields      = 10; //maximum input boxes allowed
+            var wrapper         = $(".input_fields_wrap"); //Fields wrapper
+            var add_button      = $(".add_field_button"); //Add button ID
+
+            var x = 1; //initlal text box count
+            var tx = 1;
+            $(add_button).click(function(e){ //on add input button click
+                e.preventDefault();
+                if(x < max_fields){ //max input box allowed
+                    x++; //text box increment
+                    tx++; //total text box increment
+                    $(wrapper).append('<div class="creative"><hr class="short alt"><div align="center"><a href="#" class="remove_field">Remove this creative</a><br/>-----</div>' +
+                    '<div class="section row">' +
+                    '<div class="col-md-8">' +
+                    '<div class="section">' +
+                    '<label for="Creative" class="field prepend-icon">' +
+                    '<input name="Creative" id="Creative" class="gui-input" placeholder="Creative name..." type="text" aria-required="true">' +
+                    '<label for="Creative" class="field-icon">' +
+                    '<i class="fa fa-star-half-empty"></i>' +
+                    '</label>' +
+                    '</label>' +
+                    '</div>' +
+                    '<div class="section">' +
+                    '<label class="field prepend-icon file">' +
+                    '<span class="button btn-primary">Choose File</span>' +
+                    '<input name="optinfile[]" id="optinfile" class="gui-file" onchange="document.getElementById(\'uploader'+tx+'\').value = this.value;" type="file">' +
+                    '<input name="uploader" id="uploader'+tx+'" class="gui-input" placeholder="Opt-In File..." type="text">' +
+                    '<label class="field-icon">' +
+                    '<i class="fa fa-upload"></i>' +
+                    '</label>' +
+                    '</label>' +
+                    '</div>' +
+                    '<div class="section">' +
+                    '<label class="field prepend-icon file">' +
+                    '<span class="button btn-primary">Choose File</span>' +
+                    '<input name="unsubfile[]" id="unsubfile" class="gui-file" onchange="document.getElementById(\'uploaderbis'+tx+'\').value = this.value;" type="file">' +
+                    '<input name="uploaderbis" id="uploaderbis'+tx+'" class="gui-input" placeholder="Opt-Out File..." type="text">' +
+                    '<label class="field-icon">' +
+                    '<i class="fa fa-upload"></i>' +
+                    '</label>' +
+                    '</label>' +
+                    '</div>' +
+                    '</div>' +
+                    '<div class="col-md-4 hidden-xs">' +
+                    '<div class="fileupload fileupload-new admin-form" data-provides="fileupload">' +
+                    '<div class="fileupload-preview thumbnail mb20">' +
+                    '<img data-src="holder.js/100%x140" alt="100%x140" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTk1IiBoZWlnaHQ9IjE0MCIgdmlld0JveD0iMCAwIDE5NSAxNDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxkZWZzLz48cmVjdCB3aWR0aD0iMTk1IiBoZWlnaHQ9IjE0MCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjcxLjU0Njg3NSIgeT0iNzAiIHN0eWxlPSJmaWxsOiNBQUFBQUE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6MTBwdDtkb21pbmFudC1iYXNlbGluZTpjZW50cmFsIj4xOTV4MTQwPC90ZXh0PjwvZz48L3N2Zz4=" data-holder-rendered="true" style="height: 170px; width: 100%; display: block;">' +
+                    '</div>' +
+                    '</div>' +
+                    '</div>' +
+                    '</div>' +
+                    '</div>'); //add input box
+                }
+            });
+
+            $(wrapper).on("click",".remove_field", function(e){ //user click on remove text
+                e.preventDefault(); $(this).closest('div.creative').remove(); x--;
+            });
+
 
   });
   </script>
   <!-- END: PAGE SCRIPTS -->
-
 
 <?php $__env->stopSection(); ?>
 

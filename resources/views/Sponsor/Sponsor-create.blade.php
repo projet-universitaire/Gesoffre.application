@@ -139,7 +139,7 @@ class="admin-validation-page sb-l-o sb-r-c onload-check" data-spy="scroll" data-
               <!-- end .form-body section -->
               <div class="panel-footer text-right">
                 <button type="submit" class="button btn-primary"> Validate Form </button>
-                <button type="reset" class="button btn-primary"> Cancel </button>
+                <button type="reset" class="button btn-primary"> Reset </button>
               </div>
               <!-- end .form-footer section -->
             </form>

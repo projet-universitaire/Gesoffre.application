@@ -125,12 +125,12 @@
             <span class="caret"></span>
         </a>
         <ul class="nav sub-nav">
-            <li>
-                <a href="">
+            <li <?php echo e((current_page("Categorie-list")) ? 'class=active' : ''); ?>>
+                <a href="<?php echo e(url('Categorie-list')); ?>">
                     <span class="fa fa-cube"></span> List Categories</a>
             </li>
-            <li>
-                <a href="">
+            <li <?php echo e((current_page("Categorie-create")) ? 'class=active' : ''); ?>>
+                <a href="<?php echo e(url('Categorie-create')); ?>">
                     <span class="fa fa-desktop"></span> Add Category </a>
             </li>
         </ul>
