@@ -134,7 +134,17 @@ class="datatables-page sb-l-o sb-r-c onload-check" data-spy="scroll" data-target
                         <td><?php echo $row->Website ?></td>
                         <td><?php echo $row->login ?></td>
                         <td><?php echo $row->password ?></td>
-                        <td><?php echo $row->status ?></td>
+                         <td>
+                        <?php if($row->status === 'Enable'): ?>
+                            <span class="mj_btn btn btn-success">Enable</span>
+                            <?php elseif($row->status === 'Disable'): ?>
+                             <span class="mj_btn btn btn-danger">Disable</span>
+                            <?php else: ?>
+                            <span class="mj_btn btn btn-warning">Comming soon</span>
+                          <?php endif; ?>
+                          </td>
+                        
+                        </td>
                         
                         <td class="text-right">
                           <div class="btn-group">

@@ -57,13 +57,21 @@ class OfferController extends Controller
                 'OptIn' => $post['OptIn'], 
                 'OpOut' => $post['OptOut'], 
                 'hasSuppFile' => $post['SuppFile'],
+                
+                   
                    
                ); 
                $i = DB::table('sm_offer')->insert($data);
+               
+               
+               
+               
                if ($i>0) {
                    \Session::flash('save-message','Record have been save with success');
                    return redirect('list-sponsors');
                }
+               
+               
                 
        }
      

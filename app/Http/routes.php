@@ -20,7 +20,7 @@ Route::post('saveo','OfferController@save');
 Route::post('saves','sponsorController@save');
 Route::get('deletesponsor/{id}','sponsorController@delete');
 Route::get('editsponsor/{id}','sponsorController@edit');
-Route::post('update','sponsorController@update');
+Route::post('updates','sponsorController@update');
 Route::get('/', 'dashboardController@show');
 Route::get('list-sponsors',
                 array(
