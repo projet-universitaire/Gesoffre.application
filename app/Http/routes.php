@@ -8,6 +8,8 @@
                 )
             );
     
+Route::post('saveo','OfferController@save');
+  
     
 
 

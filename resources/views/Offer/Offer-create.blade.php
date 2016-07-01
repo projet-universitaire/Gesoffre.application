@@ -71,7 +71,7 @@ class="admin-validation-page" data-spy="scroll" data-target="#nav-spy" data-offs
 
               <div class="panel heading-border panel-primary">
 
-                <form method="post" action="http://admindesigns.com/" id="admin-form" novalidate="novalidate">
+                <form method="post" action="{{action('OfferController@save')}}" id="admin-form" novalidate="novalidate">
 
                   <div class="panel-body bg-light">
 
@@ -114,8 +114,11 @@ class="admin-validation-page" data-spy="scroll" data-target="#nav-spy" data-offs
                         <label class="field select">
                         <select id="sponsor" name="sponsor">
                           <option value="">Select Sponsor...</option>
-                          <option value="EN">English</option>
-                          <option value="FR">French</option>
+                          <?php 
+                           foreach ($datas as $row){
+                          ?>
+                          <option value="<?php echo $row->id ?>"> <?php echo $row->label ?> </option>
+                         <?php  } ?>
                         </select>
                         <i class="arrow double"></i>
                       </label> 
@@ -140,12 +143,13 @@ class="admin-validation-page" data-spy="scroll" data-target="#nav-spy" data-offs
                       
                         <label class="field select">
                         <select id="Categorie" name="Categorie">
-                          <option value="">Select Categorie...</option>
-                          <option value="EN">English</option>
-                          <option value="FR">French</option>
-                          <option value="SP">Spanish</option>
-                          <option value="CH">Chinese</option>
-                          <option value="JP">Japanese</option>
+                           
+                          <option value="">Select Categorie...</option> 
+                          <?php 
+                           foreach ($data as $row){
+                          ?>
+                          <option value="<?php echo $row->id ?>"> <?php echo $row->label ?> </option>
+                         <?php  } ?>
                         </select>
                         <i class="arrow double"></i>
                       </label> 
@@ -272,7 +276,7 @@ class="admin-validation-page" data-spy="scroll" data-target="#nav-spy" data-offs
                     <div class="section">
                       <div class="option-group field">
                         <label class="block mt15 option option-primary">
-                          <input type="checkbox" name="parents" id="parents" value="parents">
+                          <input type="checkbox" name="Suppfile" id="Suppfile" value="Suppression file">
                           <span class="checkbox"></span> Has Suppression file ?
                         </label>
                       </div>
