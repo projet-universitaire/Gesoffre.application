@@ -105,7 +105,7 @@ class="datatables-page sb-l-o sb-r-c onload-check" data-spy="scroll" data-target
                     <div class="panel panel-visible" id="spy1">
                         <div class="panel-heading">
                             <div class="panel-title hidden-xs">
-                                <span class="glyphicon glyphicon-tasks"></span>List Categorie</div>
+                                <span class="glyphicon glyphicon-tasks"></span>List Categories</div>
                         </div>
                         <div class="panel-body pn">
                             <div id="datatable_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
@@ -113,7 +113,8 @@ class="datatables-page sb-l-o sb-r-c onload-check" data-spy="scroll" data-target
                                     <thead>
                                         <tr role="row">
                                             <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Name: activate to sort column ascending" style="width: 40px;">Id</th>
-                                            <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 300px;">label</th>
+                                            <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 200px;">label</th>
+                                            <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 100px;">Updated Date</th>
                                             <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 40px;">Action</th>
                                         </tr>
                                     </thead>
@@ -124,6 +125,7 @@ class="datatables-page sb-l-o sb-r-c onload-check" data-spy="scroll" data-target
                                             <tr role="row" class="odd">
                                                 <td class=""><?php echo $row->id ?> </td>
                                                 <td class="sorting_1"><?php echo $row->label ?></td>
+                                                <td class="sorting_1"><?php echo $row->updated_at ? $row->updated_at : 'no date' ?></td>
                                                 
                         <td class="text-right">
                           <div class="btn-group">

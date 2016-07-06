@@ -70,8 +70,8 @@ class="admin-validation-page" data-spy="scroll" data-target="#nav-spy" data-offs
 
               <div class="panel heading-border panel-primary">
 
-                <form method="post" action="<?php echo e(action('OfferController@save')); ?>" id="admin-form" novalidate="novalidate">
-
+                <form method="post" action="<?php echo e(action('OfferController@save')); ?>" id="admin-form" enctype="multipart/form-data">
+                   <input type="hidden"  name="_token" value="<?= csrf_token(); ?>">
                   <div class="panel-body bg-light">
 
                     <div class="section-divider mt20 mb40">
@@ -264,7 +264,7 @@ class="admin-validation-page" data-spy="scroll" data-target="#nav-spy" data-offs
                     <!-- end section -->
                     <div class="section">
                       <label for="useremail" class="field prepend-icon">
-                        <input type="email" name="OptOut" id="OptOut" class="gui-input" placeholder="Opt-Out..">
+                        <input type="url" name="OptOut" id="OptOut" class="gui-input" placeholder="Opt-Out..">
                         <label for="useremail" class="field-icon">
                           <i class="fa fa-external-link"></i>
                         </label>
@@ -275,13 +275,12 @@ class="admin-validation-page" data-spy="scroll" data-target="#nav-spy" data-offs
                     <div class="section">
                       <div class="option-group field">
                         <label class="block mt15 option option-primary">
-                          <input type="checkbox" name="Suppfile" id="Suppfile" value="Suppression file">
+                          <input type="checkbox" name="Suppfile" id="Suppfile" value="yes">
                           <span class="checkbox"></span> Has Suppression file ?
                         </label>
                       </div>
                      </div>
                     <!--End SuppreFile-->
-                    
                     <div class="section-divider mt20 mb40">
                       <span> Creatives </span>
                     </div>
@@ -338,17 +337,20 @@ class="admin-validation-page" data-spy="scroll" data-target="#nav-spy" data-offs
                      <!-- end  rows  -->
                      <!-- traitement more cretives -->
                     </div>
+                    
+                     <!--offer name -->
+                    
                      <!-- end traitement more cretives -->
                      
                      <!-- button add more creatives  -->
-                     <div align='center'><button type="button" class="btn btn-sm btn-primary btn-block add_field_button">Add More Creatives</button></div>
+                     
                      <!--end  button add more creatives  -->
                      
                  <!-- end .form-body section -->
                   </div>
                   <!-- end .form-body section -->
                   <div class="panel-footer text-right">
-                    <button type="submit" class="button btn-primary"> Validate Form </button>
+                    <button type="submit" class="button btn-primary"> Next </button>
                     <button type="reset" class="button btn-primary"> Reset </button>
                     <a href="<?php echo e(url('/')); ?>" class="button btn-primary"> Cancel </a>
                   </div>

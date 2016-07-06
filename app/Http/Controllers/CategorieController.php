@@ -36,16 +36,18 @@ class CategorieController extends Controller
                $data = array (
                       
                      'label' => $post['label'],
-                      
+                   'created_at' => \Carbon\Carbon::now()->toDateTimeString(),
+                   'updated_at' => \Carbon\Carbon::now()->toDateTimeString()
+                        
                     
                ); 
-               $i = DB::table('sm_categorie')->insert($data);
+               $i = DB::table('sm_categorie')->insert($data);             
                if ($i>0) {
                    \Session::flash('save-message','Record have been save with success');
                    return redirect('Categorie-list');
                }
                 
-       }
+       } 
        
        public function delete($id)
     {
@@ -76,7 +78,7 @@ class CategorieController extends Controller
                $data = array (
                       
                      'label' => $post['label'],
-                    
+                     'updated_at' => \Carbon\Carbon::now()->toDateTimeString()
                ); 
                $i = DB::table('sm_categorie')->where('id',$post['id'])->update($data);
                if ($i>0) {

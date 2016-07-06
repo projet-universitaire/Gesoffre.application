@@ -52,10 +52,6 @@
         "preferred-install": "dist"
     },
     
-    "require": {
-   
-    "doctrine/dbal": "v2.4.2"
-     },
      
      "require": {
     "illuminate/html": "~5.0"

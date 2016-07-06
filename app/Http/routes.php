@@ -7,7 +7,11 @@
                     'uses' => 'OfferController@show'
                 )
             );
-    
+   
+Route::get('creative/create','OfferController@showcreative');
+
+Route::post('savec','OfferController@savecategorie');   
+
 Route::post('saveo','OfferController@save');
   
     
