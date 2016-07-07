@@ -276,6 +276,8 @@ class ComposerStaticInit27b6e7f313b8c66d6f2676928a8c7b7b
         'CreateSmSponsorTable' => __DIR__ . '/../..' . '/database/migrations/2016_06_16_134017_create_sm_sponsor_table.php',
         'CreateSmSubjectTable' => __DIR__ . '/../..' . '/database/migrations/2016_06_16_134017_create_sm_subject_table.php',
         'DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeds/DatabaseSeeder.php',
+        'DeleteOnCascade' => __DIR__ . '/../..' . '/database/migrations/2016_07_07_141803_delete-on-cascade.php',
+        'DeleteOnCascadeSponsor' => __DIR__ . '/../..' . '/database/migrations/2016_07_07_143730_delete-on-cascade-sponsor.php',
         'File_Iterator' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Iterator.php',
         'File_Iterator_Facade' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Facade.php',
         'File_Iterator_Factory' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Factory.php',

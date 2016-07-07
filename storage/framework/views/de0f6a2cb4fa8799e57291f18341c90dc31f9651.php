@@ -91,8 +91,8 @@
             <span class="caret"></span>
         </a>
         <ul class="nav sub-nav">
-            <li>
-                <a href="">
+            <li <?php echo e((current_page("list-Offer")) ? 'class=active' : ''); ?>>
+                <a href="<?php echo e(url('list-Offer')); ?>">
                     <span class="fa fa-cube"></span> List Offers</a>
             </li>
             <li <?php echo e((current_page("offer/create")) ? 'class=active' : ''); ?>>

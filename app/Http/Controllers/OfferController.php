@@ -126,5 +126,27 @@ class OfferController extends Controller
                
          
        }
+       
+     public function showlist (){
+        
+     $show = DB::table('sm_offer') -> get () ;   
+     return View::make ('Offer/list-offers')-> with ('data', $show);
      
+     }
+      public function delete($id)
+    {
+        $i =DB::table('sm_offer')->where('id',$id)->delete();
+        if ($i>0) {
+                    \Session::flash('delete-message','Record have been deleted with success');
+                   return redirect('list-Offer');
+               }
+        
+    }
+
+    public function preveiw (){
+        
+      
+        return View::make ('Offer/preview');
+        
+    }
 }

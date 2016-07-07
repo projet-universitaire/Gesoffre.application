@@ -13,10 +13,14 @@ Route::get('creative/create','OfferController@showcreative');
 Route::post('savec','OfferController@savecategorie');   
 
 Route::post('saveo','OfferController@save');
-  
+
+Route::get('list-Offer','OfferController@showlist');
+
+Route::get('deleteoffer/{id}','OfferController@delete');
+//preveiw
+Route::get('offer-preview','OfferController@preveiw');
+//end preveiw 
     
-
-
 // end offer controller 
 
 

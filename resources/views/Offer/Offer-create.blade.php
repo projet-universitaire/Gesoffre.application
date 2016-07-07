@@ -177,9 +177,9 @@ class="admin-validation-page" data-spy="scroll" data-target="#nav-spy" data-offs
                         <label class="field select">
                         <select id="Status" name="Status">
                           <option value="">Select Status...</option>
-                          <option value="Active">Active</option>
-                          <option value="Inactive">Inactive</option>
-                          <option value=" Coming soon">Coming soon</option>
+                          <option value="1">Active</option>
+                          <option value="2">Inactive</option>
+                          <option value="3">Coming soon</option>
                         </select>
                         <i class="arrow double"></i>
                       </label> 
@@ -306,7 +306,7 @@ class="admin-validation-page" data-spy="scroll" data-target="#nav-spy" data-offs
                       <label for="file1" class="field file">
                         <span class="button btn-primary"> Choose File </span>
                         <input type="file" class="gui-file" name="optinfile" id="optinfile" onchange="document.getElementById('uploader1').value = this.value;">
-                        <input type="text" class="gui-input" id="optinfile" placeholder="Opt-In file.." readonly="">
+                        <input type="text" class="gui-input" id="uploader1" placeholder="Opt-In file.." readonly="">
                       </label>
                     </div>
                            
@@ -316,8 +316,8 @@ class="admin-validation-page" data-spy="scroll" data-target="#nav-spy" data-offs
                     <div class="section" id="spy2">
                       <label for="file1" class="field file">
                         <span class="button btn-primary"> Choose File </span>
-                        <input type="file" class="gui-file" name="optoutfile" id="optoutfile" onchange="document.getElementById('uploader1').value = this.value;">
-                        <input type="text" class="gui-input" id="optoutfile" placeholder="Op-Out file.." readonly="">
+                        <input type="file" class="gui-file" name="optoutfile" id="optoutfile" onchange="document.getElementById('uploader12').value = this.value;">
+                        <input type="text" class="gui-input" id="uploader12" placeholder="Op-Out file.." readonly="">
                       </label>
                     </div>
                          </div>
@@ -344,14 +344,14 @@ class="admin-validation-page" data-spy="scroll" data-target="#nav-spy" data-offs
                      <!-- end traitement more cretives -->
                      
                      <!-- button add more creatives  -->
-                     
+                      <div align='center'><button type="button" class="btn btn-sm btn-primary btn-block add_field_button">Add More Creatives</button></div>
                      <!--end  button add more creatives  -->
                      
                  <!-- end .form-body section -->
                   </div>
                   <!-- end .form-body section -->
                   <div class="panel-footer text-right">
-                    <button type="submit" class="button btn-primary"> Next </button>
+                    <button type="submit" class="button btn-primary"> Validate </button>
                     <button type="reset" class="button btn-primary"> Reset </button>
                     <a href="{{url('/')}}" class="button btn-primary"> Cancel </a>
                   </div>

@@ -91,8 +91,8 @@
             <span class="caret"></span>
         </a>
         <ul class="nav sub-nav">
-            <li>
-                <a href="">
+            <li {{ (current_page("list-Offer")) ? 'class=active' : ''}}>
+                <a href="{{url('list-Offer')}}">
                     <span class="fa fa-cube"></span> List Offers</a>
             </li>
             <li {{ (current_page("offer/create")) ? 'class=active' : ''}}>

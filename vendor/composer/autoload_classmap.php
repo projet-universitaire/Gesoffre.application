@@ -17,6 +17,8 @@ return array(
     'CreateSmSponsorTable' => $baseDir . '/database/migrations/2016_06_16_134017_create_sm_sponsor_table.php',
     'CreateSmSubjectTable' => $baseDir . '/database/migrations/2016_06_16_134017_create_sm_subject_table.php',
     'DatabaseSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',
+    'DeleteOnCascade' => $baseDir . '/database/migrations/2016_07_07_141803_delete-on-cascade.php',
+    'DeleteOnCascadeSponsor' => $baseDir . '/database/migrations/2016_07_07_143730_delete-on-cascade-sponsor.php',
     'File_Iterator' => $vendorDir . '/phpunit/php-file-iterator/src/Iterator.php',
     'File_Iterator_Facade' => $vendorDir . '/phpunit/php-file-iterator/src/Facade.php',
     'File_Iterator_Factory' => $vendorDir . '/phpunit/php-file-iterator/src/Factory.php',
