@@ -6,8 +6,7 @@
             <file>file:/C:/Projects/Gesoffre.app/app/Http/routes.php</file>
             <file>file:/C:/Projects/Gesoffre.app/resources/views/Offer/list-offers.blade.php</file>
             <file>file:/C:/Projects/Gesoffre.app/app/Http/Controllers/OfferController.php</file>
-            <file>file:/C:/Projects/Gesoffre.app/resources/views/Categories/list-categories.blade.php</file>
-            <file>file:/C:/Projects/Gesoffre.app/app/Http/Controllers/CategorieController.php</file>
+            <file>file:/C:/Projects/Gesoffre.app/resources/views/Offer/preview.blade.php</file>
         </group>
     </open-files>
 </project-private>

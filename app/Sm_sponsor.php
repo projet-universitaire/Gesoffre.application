@@ -1,6 +1,8 @@
 <?php
+namespace App; 
+use Illuminate\Database\Eloquent\Model;
 
-class Sm_sponsor extends Eloquent {
+class Sm_sponsor extends Model {
 
 	protected $table = 'sm_sponsor';
 	public $timestamps = true;

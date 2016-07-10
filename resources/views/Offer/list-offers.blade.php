@@ -123,12 +123,10 @@ class="datatables-page sb-l-o sb-r-c onload-check" data-spy="scroll" data-target
                                     </thead>
                                     <tbody>
                                         @foreach ($data as $row)
-    
-
                                              
                                             <tr role="row" class="odd">
                                                 
-                                                <td class="">{{ $row->id }}</td>
+                                                <td class=""><a href="<?php echo 'offer-preview/' . $row->id ?>">{{ $row->id }}</a></td>
                                                 <td class="sorting_1">{{ $row->label }}</td>
                                                 <td class="sorting_1">{{ $row->country }}</td>
                                                 <td class="sorting_1">{{ $row->SponsorOfferId }}</td>
@@ -154,7 +152,7 @@ class="datatables-page sb-l-o sb-r-c onload-check" data-spy="scroll" data-target
                             </li>
                             <li class="divider"></li>
                             <li>
-                              <a href="#">Preview</a>
+                              <a href="<?php echo 'offer-preview/' . $row->id ?>">Preview</a>
                             </li>
                             <li class="active">
                               <a href="#">Enable</a>
@@ -180,7 +178,7 @@ class="datatables-page sb-l-o sb-r-c onload-check" data-spy="scroll" data-target
                             </li>
                             <li class="divider"></li>
                             <li>
-                              <a href="#">Preview</a>
+                              <a href="<?php echo 'offer-preview/' . $row->id ?>">Preview</a>
                             </li>
                             <li class="active">
                               <a href="#">Disable</a>
@@ -206,7 +204,7 @@ class="datatables-page sb-l-o sb-r-c onload-check" data-spy="scroll" data-target
                             </li>
                             <li class="divider"></li>
                             <li>
-                              <a href="#">Preview</a>
+                              <a href="<?php echo 'offer-preview/' . $row->id ?>">Preview</a>
                             </li>
                             <li class="active">
                               <a href="#">Comming Soon</a>

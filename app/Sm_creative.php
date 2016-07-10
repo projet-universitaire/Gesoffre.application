@@ -1,6 +1,9 @@
 <?php
 
-class Sm_creative extends Eloquent {
+namespace App; 
+use Illuminate\Database\Eloquent\Model;
+
+class Sm_creative extends Model {
 
 	protected $table = 'sm_creative';
 	public $timestamps = true;
@@ -12,7 +15,7 @@ class Sm_creative extends Eloquent {
 
 	public function sms()
 	{
-		return $this->belongsTo('Sm_offer');
+		return $this->belongsTo('App\Sm_offer','id');
 	}
 
 }

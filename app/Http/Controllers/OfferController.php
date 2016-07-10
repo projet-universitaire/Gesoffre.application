@@ -143,10 +143,27 @@ class OfferController extends Controller
         
     }
 
-    public function preveiw (){
-        
-      
-        return View::make ('Offer/preview');
-        
+    public function preveiw ($id){
+        $row=  \App\Sm_offer::find($id);
+       // $row =DB::table('sm_offer')->where('id',$id)->first();
+        $sposors= \App\Sm_sponsor::find($row->sponsor_id);
+        $categorie= \App\Sm_categorie::find($row->category_id);
+        $creative=$row->creative;
+       // $creative->srcIn->encode('data-url');
+        return View::make ('Offer/preview')
+                -> with ('row', $row)
+                -> with ('sposors', $sposors)
+                -> with ('categorie', $categorie)
+                -> with ('creative', $creative);
     }
+    public function sp($id){
+  
+       $row=  \App\Sm_offer::find($id);
+       echo 'hello i am'.$row->label.'<br>';
+       $creatives=$row->creative;
+       foreach ($creatives as $creative){
+        
+           echo $creative->label."<br>";
+           echo $creative->srcOut."<br>";
+    }}
 }

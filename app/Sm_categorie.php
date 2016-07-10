@@ -1,6 +1,8 @@
 <?php
+namespace App; 
+use Illuminate\Database\Eloquent\Model;
 
-class Sm_categorie extends Eloquent {
+class Sm_categorie extends Model {
 
 	protected $table = 'sm_categorie';
 	public $timestamps = true;
