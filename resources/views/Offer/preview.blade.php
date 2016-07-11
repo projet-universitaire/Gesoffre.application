@@ -35,7 +35,7 @@ class="profile-page"
           
           <div class="clearfix"></div>
           <section id="form-control" class="well">
-                <h2 class="page-header mtn">Offer informatios</h2>           
+                <h2 class="page-header mtn">Offer informations</h2>           
                 
                 <table class="table mbn table-striped admin-form theme-info">
   <thead>
@@ -115,8 +115,8 @@ class="profile-page"
                     <thead>
                       <tr class="hidden">
                         <th class="mw30">#</th>
-                        <th>First Name</th>
-                        <th>Revenue</th>
+                        <th>Name</th>
+                        <th>data</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -126,7 +126,7 @@ class="profile-page"
                         </td>
                         <td>Payout</td>
                         <td>
-                          <i class="fa fa-caret-up text-info pr10"></i>{{$row->payout}}</td>
+                          <i class="fa fa-caret-up text-info pr10"></i>{{$row->payout.' $'}}</td>
                       </tr>
                       <tr>
                         <td>
@@ -148,8 +148,8 @@ class="profile-page"
                   <span class="panel-title"> Redirections links</span>
                 </div>
                 <div class="panel-body pb10">
-                    <h5>OptIn :</h5><span class="label label-success mr5 mb5 ib lh15">{{$row->optIn}}</span><br>
-                    <h5>OptOut :</h5><span class="label label-warning mr5 mb5 ib lh15">{{$row->opOut}}</span>
+                    <h5>OptIn :</h5><span class="label-success">{{$row->optIn}}</span><br>
+                    <h5>OptOut :</h5><span class="label-warning ">{{$row->opOut}}</span>
                 </div>
               </div>
               <div class="panel">
@@ -162,13 +162,13 @@ class="profile-page"
                 <div class="panel-body pb5">
 
                   <h4>Forms</h4>
-                  <p class="text-muted"> {{$row->forms}}  
+                  <p class="text-muted" > <?php  echo nl2br("$row->forms"); ?> <!--nl2br: replace n with br-->
                   </p>
 
                   <hr class="short br-lighter">
 
                   <h4>Subjects</h4>
-                  <p class="text-muted"> {{$row->subjects}}  
+                  <p class="text-muted" > <?php  echo nl2br("$row->forms"); ?>   <!--nl2br: replace n with br-->
                   </p>
 
                   <hr class="short br-lighter">
@@ -222,9 +222,10 @@ class="profile-page"
                         </td>
                         <td>Opt-In: </td>
                         <td>
-                            <img src="{{ URL::to( $creatives->srcIn) }}" alt="{{$creatives->srcIn}}" style="width: 250px; height: 150px;"></td>
-                      <td>
-                          <h1>download</h1></td>
+                            <img src="{{ asset('assets/img/cr/'.$creatives->srcIn) }}"class="img img-responsive" alt="{{$creatives->srcIn}}" style="width: 250px; height: 150px;"></td>
+                        <td>
+                          <a href="{{url( 'download/'.$creatives->srcIn )}}"  class="btn btn-primary btn-block">Download</a>   
+                      </td>
                       </tr>
                       <tr>
                         <td>
@@ -232,9 +233,10 @@ class="profile-page"
                         </td>
                         <td>Unsubscribe</td>
                         <td>
-                         <img src="../resources/assets/image_uploaded/OptOut-32.jpg" alt="{{$creatives->srcOut}}"  style="width: 250px; height: 150px;"></td>
+                         <img src="{{ asset('assets/img/cr/'.$creatives->srcOut) }}" class="img img-responsive" alt="{{$creatives->srcOut}}"  style="width: 250px; height: 150px;"></td>
                       <td>
-                          <h1>download</h1></td>
+                         <a href="{{url( 'download/'.$creatives->srcOut )}}"  class="btn btn-primary btn-block">Download</a>
+                      </td>
                       </tr>
                     </tbody>
                   </table>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\View;
 use App\Http\Controllers\controller;
+use app\Http\Controllers\DownloadsController;
 use App\Http\Requests;
 use DB;
 use App\uploadOpt; 
@@ -18,12 +19,6 @@ class OfferController extends Controller
         $show = DB::table('sm_categorie') -> get () ;
         $shows = DB::table('sm_sponsor') -> get () ;
         return View::make ('Offer/Offer-create')-> with ('data', $show)-> with ('datas', $shows);
-        
-    }
-    public function showcreative (){
-        
-      
-        return View::make ('Offer/creative-create');
         
     }
     
@@ -68,64 +63,40 @@ class OfferController extends Controller
                 'OpOut' => $post['OptOut'],
                 'hasSuppFile' => $post['Suppfile'],
                 'created_at' => \Carbon\Carbon::now()->toDateTimeString(),
-                'updated_at' => \Carbon\Carbon::now()->toDateTimeString()
-                   
-                
+                'updated_at' => \Carbon\Carbon::now()->toDateTimeString()                   
                    
                ); 
                
-               $i = DB::table('sm_offer')->insertGetId($data);
-
-               $upload= array (
-                   
-                   'label'=>$post['Creative'],
-                   'srcIn'=>uploadOpt::upload('optinfile','../resources/assets/image_uploaded','no image',$i),
-                   'srcOut'=>uploadOpt::upload2('optoutfile','../resources/assets/image_uploaded','no image',$i),
+             $i = DB::table('sm_offer')->insertGetId($data);
+            $labels=$post['Creative'];//récupérer la valeur de creative label 
+           // dd(count($labels));
+            for($j=0;$j<count($labels);$j++) //boucle pour ajouté plus de creatives  
+            {
+                $optInfile=$post['optinfile'][$j];   //récupérer la valeur de optinfile 
+                $optoutfile=$post['optoutfile'][$j];//récupérer la valeur de optoutfile
+                
+                //dd($optInfile);
+                
+                    $upload=array (
+                   'label'=>$post['Creative'][$j],//tableau creative  label 
+                   'srcIn'=>uploadOpt::upload($optInfile,'assets/img/cr/','no image',$i,$j),
+                   'srcOut'=>uploadOpt::upload2($optoutfile,'assets/img/cr/','no image',$i,$j),
                    'offer_id' => $i,
                    'created_at' => \Carbon\Carbon::now()->toDateTimeString(),
                    'updated_at' => \Carbon\Carbon::now()->toDateTimeString()
                    
                    
                    
-                   );
-                DB::table('sm_creative')->insertGetId($upload);
-         
-               return redirect()->back();
-                   
+                   ); 
+               $c=DB::table('sm_creative')->insert($upload);
+            }
+            if ($c>0) {
+              \Session::flash('save-message','Record have been saved with success');
+                   return redirect('list-Offer');
+            }
        }
-        public function savecategorie (Request $request) 
-    {
-            
-     //   $post = $request->all(); 
-      //  $v = \Validator::make($request->all(),
-         //   [
-          //     'label' => 'required',
-               
-          //  ]);
-         //  ://    $data = array (
-                   
-             //      'label' => $post['Creative'],
-            //   );
-               
-            //   $i = DB::table('sm_creative')->insert($data);
-               $post = $request->all();
-               $upload= array (
-                   
-                   'label'=>$post['Creative'],
-                   'srcIn'=>uploadOpt::upload('optinfile','../resources/assets/image_uploaded','no image'),
-                   'srcOut'=>uploadOpt::upload('optoutfile','../resources/assets/image_uploaded','no image'),
-                   'offer_id' => 6
-                   
-                   
-                   
-                   );
-                $id = DB::table('sm_creative')->insertGetId($upload);
-         
-               return redirect()->back(); 
-        
-               
-         
-       }
+      
+    
        
      public function showlist (){
         
@@ -154,16 +125,14 @@ class OfferController extends Controller
                 -> with ('row', $row)
                 -> with ('sposors', $sposors)
                 -> with ('categorie', $categorie)
-                -> with ('creative', $creative);
+                -> with ('creative', $creative);    
     }
-    public function sp($id){
+    function download($filename){
   
-       $row=  \App\Sm_offer::find($id);
-       echo 'hello i am'.$row->label.'<br>';
-       $creatives=$row->creative;
-       foreach ($creatives as $creative){
-        
-           echo $creative->label."<br>";
-           echo $creative->srcOut."<br>";
-    }}
+    //$iamgename=$row->srcIn;
+    //$file_path =  public_path('/assets/img/cr/'.$filename);
+   // $img =  public_path ('/assets/img/cr/'.$filename);
+   
+   return response()->download(public_path('/assets/img/cr/'.$filename));
 }
+   }

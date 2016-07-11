@@ -290,7 +290,7 @@ class="admin-validation-page" data-spy="scroll" data-target="#nav-spy" data-offs
                           <div class="col-md-8">
                     <div class="section">
                         <label for="firstname" class="field prepend-icon">
-                          <input type="text" name="Creative" id="Creative" class="gui-input" placeholder="Creative name...">
+                          <input type="text" name="Creative[]" id="Creative" class="gui-input" placeholder="Creative name...">
                           <label for="firstname" class="field-icon">
                             <i class="fa fa-star-half-empty"></i>
                           </label>
@@ -304,7 +304,7 @@ class="admin-validation-page" data-spy="scroll" data-target="#nav-spy" data-offs
                     <div class="section" id="spy2">
                       <label for="file1" class="field file">
                         <span class="button btn-primary"> Choose File </span>
-                        <input type="file" class="gui-file" name="optinfile" id="optinfile" onchange="document.getElementById('uploader1').value = this.value;">
+                        <input type="file" class="gui-file" name="optinfile[]" id="optinfile" onchange="document.getElementById('uploader1').value = this.value;">
                         <input type="text" class="gui-input" id="uploader1" placeholder="Opt-In file.." readonly="">
                       </label>
                     </div>
@@ -315,8 +315,8 @@ class="admin-validation-page" data-spy="scroll" data-target="#nav-spy" data-offs
                     <div class="section" id="spy2">
                       <label for="file1" class="field file">
                         <span class="button btn-primary"> Choose File </span>
-                        <input type="file" class="gui-file" name="optoutfile" id="optoutfile" onchange="document.getElementById('uploader12').value = this.value;">
-                        <input type="text" class="gui-input" id="uploader12" placeholder="Op-Out file.." readonly="">
+                        <input type="file" class="gui-file" name="optoutfile[]" id="optoutfile" onchange="document.getElementById('uploader1-2').value = this.value;">
+                        <input type="text" class="gui-input" id="uploader1-2" placeholder="Op-Out file.." readonly="">
                       </label>
                     </div>
                          </div>
@@ -801,7 +801,7 @@ class="admin-validation-page" data-spy="scroll" data-target="#nav-spy" data-offs
                     '<div class="col-md-8">' +
                     '<div class="section">' +
                     '<label for="Creative" class="field prepend-icon">' +
-                    '<input name="Creative" id="Creative" class="gui-input" placeholder="Creative name..." type="text" aria-required="true">' +
+                    '<input name="Creative[]" id="Creative" class="gui-input" placeholder="Creative name..." type="text" aria-required="true">' +
                     '<label for="Creative" class="field-icon">' +
                     '<i class="fa fa-star-half-empty"></i>' +
                     '</label>' +
@@ -820,7 +820,7 @@ class="admin-validation-page" data-spy="scroll" data-target="#nav-spy" data-offs
                     '<div class="section">' +
                     '<label class="field prepend-icon file">' +
                     '<span class="button btn-primary">Choose File</span>' +
-                    '<input name="unsubfile[]" id="unsubfile" class="gui-file" onchange="document.getElementById(\'uploaderbis'+tx+'\').value = this.value;" type="file">' +
+                    '<input name="optoutfile[]" id="optoutfile" class="gui-file" onchange="document.getElementById(\'uploaderbis'+tx+'\').value = this.value;" type="file">' +
                     '<input name="uploaderbis" id="uploaderbis'+tx+'" class="gui-input" placeholder="Opt-Out File..." type="text">' +
                     '<label class="field-icon">' +
                     '<i class="fa fa-upload"></i>' +

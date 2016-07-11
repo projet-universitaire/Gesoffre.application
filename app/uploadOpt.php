@@ -4,39 +4,36 @@ namespace App;
 use Input;
 
 class uploadOpt {
-public static function upload($fileName,$path,$defaultName=null,$lastofferid) {
+public static function upload($file,$path,$defaultName=null,$lastofferid,$key) {
     
     $photo=null; 
-    $file=Input::file($fileName); 
-    if (Input::hasfile($fileName)){
+    if ($file->isValid()){
         $destinationPath=$path; 
         $extension = $file -> getClientOriginalExtension(); 
-        $name      = $file -> getClientOriginalName();
-        $name      = 'OptIn-'.$lastofferid.'.'.$extension;
-        $photo     = $destinationPath.'/'.$name;
+        $name      = 'OptIn'.$key.'-'.$lastofferid.'.'.$extension; //save the name of the image 
+        $photo     = $name;
     $file->move($destinationPath,$name);
     } 
     
     else {$photo=$defaultName;} 
     
-       return $photo; 
+       return $photo;  // return the name of the image uploaded  
     }
-    public static function upload2($fileName,$path,$defaultName=null,$lastofferid) {
+    public static function upload2($file,$path,$defaultName=null,$lastofferid,$key) {
     
+     
     $photo=null; 
-    $file=Input::file($fileName); 
-    if (Input::hasfile($fileName)){
+    if ($file->isValid()){
         $destinationPath=$path; 
         $extension = $file -> getClientOriginalExtension(); 
-        $name      = $file -> getClientOriginalName();
-        $name      = 'OptOut-'.$lastofferid.'.'.$extension;
-        $photo     = $destinationPath.'/'.$name;
+        $name      = 'OptOut'.$key.'-'.$lastofferid.'.'.$extension;
+        $photo     = $name; //save the name of the image 
     $file->move($destinationPath,$name);
     } 
     
     else {$photo=$defaultName;} 
     
-       return $photo; 
+       return $photo;  // return the name of the image uploaded  
     }
   }
 
