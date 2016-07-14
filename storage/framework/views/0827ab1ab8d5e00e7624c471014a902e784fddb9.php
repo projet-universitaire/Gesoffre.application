@@ -132,12 +132,12 @@ class="admin-validation-page sb-l-o sb-r-c onload-check" data-spy="scroll" data-
                     <p>label : </p>
                     <div class="section">
                       <label class="field select">
-                        <select id="language" name="status" value="<?=$row->status ?>">
+                        <select id="language" name="status" value="">
                           <option value="">Select Status...</option>
-                          <option value="Enable">Enable</option>
-                          <option value="Disable">Disable</option>
-                          <option value="Coming Soon">Coming Soon</option>
-                         
+                          <option value="Enable" <?php if($row->status === 'Enable'): ?> selected="selected"<?php endif; ?>>Enable</option>
+                          <option value="Disable" <?php if($row->status === 'Disable'): ?> selected="selected"<?php endif; ?>>Disable</option>
+                          <option value="Coming Soon" <?php if($row->status === 'Coming Soon'): ?> selected="selected"<?php endif; ?>>Coming Soon</option>
+             
                         </select>
                         <i class="arrow double"></i>
                       </label>

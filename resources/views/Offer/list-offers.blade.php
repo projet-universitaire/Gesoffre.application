@@ -145,7 +145,7 @@ class="datatables-page sb-l-o sb-r-c onload-check" data-spy="scroll" data-target
                           </button>
                           <ul class="dropdown-menu" role="menu">
                             <li>
-                              <a href="#">Edit</a>
+                              <a href="{{url('editoffer/'.$row->id)}}">Edit</a>
                             </li>
                             <li>
                               <a href="<?php echo 'deleteoffer/' . $row->id ?>" onclick="return confirm('Are you sure you want to delete?')">Delete</a>
@@ -171,7 +171,7 @@ class="datatables-page sb-l-o sb-r-c onload-check" data-spy="scroll" data-target
                           </button>
                           <ul class="dropdown-menu" role="menu">
                             <li>
-                              <a href="#">Edit</a>
+                               <a href="{{url('editoffer/'.$row->id)}}">Edit</a>
                             </li>
                             <li>
                               <a href="<?php echo 'deleteoffer/' . $row->id ?>" onclick="return confirm('Are you sure you want to delete?')">Delete</a>
@@ -197,7 +197,7 @@ class="datatables-page sb-l-o sb-r-c onload-check" data-spy="scroll" data-target
                           </button>
                           <ul class="dropdown-menu" role="menu">
                             <li>
-                              <a href="#">Edit</a>
+                               <a href="{{url('editoffer/'.$row->id)}}">Edit</a>
                             </li>
                             <li>
                               <a href="<?php echo 'deleteoffer/' . $row->id ?>" onclick="return confirm('Are you sure you want to delete?')">Delete</a>

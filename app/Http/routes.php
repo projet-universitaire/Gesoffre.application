@@ -20,7 +20,9 @@ Route::get('offer-preview/{id}','OfferController@preveiw');
 
 Route::get('download/{filename}','OfferController@download');
 //end preveiw 
-    
+Route::get('editoffer/{id}','OfferController@edit');
+
+Route::post('updateo','OfferController@update');
 // end offer controller 
 
 

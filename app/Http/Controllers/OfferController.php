@@ -116,11 +116,11 @@ class OfferController extends Controller
 
     public function preveiw ($id){
         $row=  \App\Sm_offer::find($id);
-       // $row =DB::table('sm_offer')->where('id',$id)->first();
+        //$row =DB::table('sm_offer')->where('id',$id)->first();
         $sposors= \App\Sm_sponsor::find($row->sponsor_id);
         $categorie= \App\Sm_categorie::find($row->category_id);
         $creative=$row->creative;
-       // $creative->srcIn->encode('data-url');
+      //  $creative->srcIn->encode('data-url');
         return View::make ('Offer/preview')
                 -> with ('row', $row)
                 -> with ('sposors', $sposors)
@@ -134,5 +134,25 @@ class OfferController extends Controller
    // $img =  public_path ('/assets/img/cr/'.$filename);
    
    return response()->download(public_path('/assets/img/cr/'.$filename));
-}
+} 
+    public function edit($id) {
+    
+        $row=  \App\Sm_offer::find($id);
+    // $row =DB::table('sm_offer')->where('id',$id)->first();
+    // $sponsors= \App\Sm_sponsor::find($row->sponsor_id);
+    // $categorie= \App\Sm_categorie::find($row->category_id);
+       $categorie = DB::table('sm_categorie') -> get () ;
+       $sponsors = DB::table('sm_sponsor') -> get () ;
+       $creative=$row->creative;
+      return View('Offer/offer-edit')
+              -> with ('row', $row)
+               -> with ('sponsors', $sponsors)
+              -> with ('categorie', $categorie)
+               -> with ('creative', $creative);
+                   
+    }
+    public function update() {
+    
+        
+    }
    }

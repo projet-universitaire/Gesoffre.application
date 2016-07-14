@@ -6,9 +6,12 @@
             <file>file:/C:/Projects/Gesoffre.app/resources/views/Offer/offer-edit.blade.php</file>
             <file>file:/C:/Projects/Gesoffre.app/app/Http/routes.php</file>
             <file>file:/C:/Projects/Gesoffre.app/resources/views/Offer/list-offers.blade.php</file>
+            <file>file:/C:/Projects/Gesoffre.app/app/Sm_offer.php</file>
             <file>file:/C:/Projects/Gesoffre.app/app/Http/Controllers/OfferController.php</file>
-            <file>file:/C:/Projects/Gesoffre.app/resources/views/Offer/creative-create.blade.php</file>
-            <file>file:/C:/Projects/Gesoffre.app/app/uploadOpt.php</file>
+            <file>file:/C:/Projects/Gesoffre.app/resources/views/Offer/preview.blade.php</file>
+            <file>file:/C:/Projects/Gesoffre.app/resources/views/Offer/Offer-create.blade.php</file>
+            <file>file:/C:/Projects/Gesoffre.app/app/Http/Controllers/CategorieController.php</file>
+            <file>file:/C:/Projects/Gesoffre.app/app/Sm_creative.php</file>
         </group>
     </open-files>
 </project-private>
