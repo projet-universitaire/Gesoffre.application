@@ -77,7 +77,7 @@
     <li class="sidebar-label pt20">Menu</li>
 
     <li {{ (current_page("/")) ? 'class=active' : ''}}>
-        <a href="{{url('/')}}">
+        <a href="{{url('list-Offer')}}">
             <span class="glyphicon glyphicon-home"></span>
             <span class="sidebar-title">Dashboard</span>
         </a>

@@ -848,7 +848,7 @@ class="admin-validation-page" data-spy="scroll" data-target="#nav-spy" data-offs
             $(add_button).click(function(e){ //on add input button click
                 e.preventDefault();
                 if(x < max_fields){ //max input box allowed
-                   
+                  
                     $(wrapper).append('<div class="creative"><hr class="short alt"><div align="center"><a href="#" class="remove_field">Remove this creative</a><br/>-----</div>' +
                     '<div class="section row">' +
                     '<div class="col-md-8">' +

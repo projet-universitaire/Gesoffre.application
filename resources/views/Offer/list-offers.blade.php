@@ -98,9 +98,9 @@ class="datatables-page sb-l-o sb-r-c onload-check" data-spy="scroll" data-target
           <a href="{{url('offer/create')}}" class="btn btn-default btn-sm fw600 ml10" style="
     margin-bottom: 10px;">
             <span class="fa fa-plus pr5"></span> Add Offer</a>
-        </div>      
+        </div>    
 
-                    <!-- end errors with laravel -->
+               <!-- end errors with laravel -->
                     <div class="panel panel-visible" id="spy1">
                         <div class="panel-heading">
                             <div class="panel-title hidden-xs">

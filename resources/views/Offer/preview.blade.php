@@ -59,7 +59,7 @@ class="profile-page"
       <td class="text-right">
         <label class="option block mn">
           {{$row->country}}
-        </label>
+        </label>v
       </td>
     </tr>
     <tr>   
@@ -275,7 +275,6 @@ class="profile-page"
 
     // Init Demo JS  
     Demo.init();
-
 
   });
   </script>

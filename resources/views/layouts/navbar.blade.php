@@ -21,7 +21,7 @@
       <ul class="nav navbar-nav navbar-right">
 				
         
-        <li class="dropdown menu-merge">
+     <!--   <li class="dropdown menu-merge">
           <div class="navbar-btn btn-group">
             <button data-toggle="dropdown" class="btn btn-sm dropdown-toggle">
               <span class="ad ad-radio-tower fs14 va-m"></span>
@@ -390,8 +390,8 @@
               </div>
             </div>
           </div>
-        </li>
-				
+        </li> 
+     end nav bar -->		
         <li class="menu-divider hidden-xs">
           <i class="fa fa-circle"></i>
         </li>
@@ -405,10 +405,7 @@
             
               
             
-            <li class="list-group-item">
-              <a href="#" class="animated animated-short fadeInUp">
-                <span class="fa fa-bell"></span> Notifications </a>
-            </li>
+          
             <li class="list-group-item">
               <a href="#" class="animated animated-short fadeInUp">
                 <span class="fa fa-gear"></span> Settings </a>

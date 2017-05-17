@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\View;
 use App\Http\Controllers\controller;
 use app\Http\Controllers\DownloadsController;
 use App\Http\Requests;
+use File;  
 use DB;
 use App\uploadOpt; 
 
@@ -106,8 +107,16 @@ class OfferController extends Controller
      }
       public function delete($id)
     {
-        $i =DB::table('sm_offer')->where('id',$id)->delete();
-        if ($i>0) {
+       $row=  \App\Sm_offer::find($id);
+       $creative=$row->creative;
+       $files = array($creative->srcIn, $creative->srcOut);
+       File::delete($files);
+       
+     //  File::delete($creative->srcIn, $creative->srcOut);
+       
+       $row->delete();
+    //    File::delete($filename);
+        if ($row>0) {
                     \Session::flash('delete-message','Record have been deleted with success');
                    return redirect('list-Offer');
                }
@@ -146,9 +155,9 @@ class OfferController extends Controller
        $creative=$row->creative;
       return View('Offer/offer-edit')
               -> with ('row', $row)
-               -> with ('sponsors', $sponsors)
+              -> with ('sponsors', $sponsors)
               -> with ('categorie', $categorie)
-               -> with ('creative', $creative);
+              -> with ('creative', $creative);
                    
     }
     public function update() {
